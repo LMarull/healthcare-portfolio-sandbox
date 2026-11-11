@@ -81,15 +81,17 @@ footer{margin-top:64px;color:var(--muted);font-size:.9rem}
    file: what opens when clicked (put files in the assets/ folder)
    download: optional extra file, such as an .xlsx with anonymized data */
 const items = [
-  {
+    {
     kind: "Excel",
     title: "Excel Dashboards",
+    result: "[One line: your headline result]",
     type: "image",
     thumb: "assets/dashboard-thumb.jpg",
     file: "assets/dashboard.png",
-    Purpose: "[Workflow Tracking]"
+    problem: "Workflow tracking",
     did: "",
-    outcome: "",}
+    outcome: ""
+  },
   {
     kind: "P&L",
     title: "P&L Risk Modeling",
@@ -97,29 +99,32 @@ const items = [
     type: "pdf",
     thumb: "assets/pnl-thumb.jpg",
     file: "assets/pnl-risk-model.pdf",
-    Purpose: "[KPI Tracking],
+    problem: "KPI tracking",
     did: "",
-    outcome: "",}
+    outcome: ""
+  },
   {
     kind: "Case study",
     title: "Case Studies",
     result: "[One line: your headline result]",
     type: "pdf",
     thumb: "assets/case-study-thumb.jpg",
-    file: "assets/case-study.pdf",}
-    Purpose: "[Pitch Deck]"
-    did:"",
-    outcome:"",}
+    file: "assets/case-study.pdf",
+    problem: "Pitch deck",
+    did: "",
+    outcome: ""
+  },
   {
     kind: "AI agent",
-    title: "AI agents Workflow",
+    title: "AI agents workflow",
     result: "[One line: time or cost saved]",
     type: "video",
     thumb: "assets/agent-thumb.jpg",
-    file: "assets/agent-demo.mp4",}
-    purpose: "[Automated and Implementable]",
-    did:"",
-    outcome:"",}
+    file: "assets/agent-demo.mp4",
+    problem: "Automated and implementable",
+    did: "",
+    outcome: ""
+  },
   {
     kind: "Marketing",
     title: "Marketing",
@@ -127,10 +132,10 @@ const items = [
     type: "image",
     thumb: "assets/marketing-thumb.jpg",
     file: "assets/marketing.png",
-    Purpose: "[Strategies of working marketing material]"
+    problem: "Strategies behind working marketing material",
     did: "",
-    outcome: "",}
-    
+    outcome: ""
+  }
 ];
 
 const grid = document.getElementById("grid");
