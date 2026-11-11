@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luis Marull – Portfolio</title>
+<meta name="description" content="Healthcare operator and Columbia MBA candidate. Selected work: dashboards, risk and P&amp;L models, case studies, AI agents, and marketing.">
+<meta property="og:title" content="Luis Marull – Portfolio">
+<meta property="og:description" content="Selected work in healthcare operations, risk management, and growth.">
+<meta property="og:image" content="assets/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f6f7f9;--ink:#14213d;--muted:#566174;--line:#d7dce5;--blue:#b9d9eb;--link:#24618f;--card:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.55 "Public Sans",system-ui,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:64px 24px 80px}
+h1,h2,h3{font-family:Newsreader,Georgia,serif;font-weight:500;margin:0}
+h1{font-size:clamp(2.6rem,7vw,4.4rem);line-height:1.02;letter-spacing:-.01em}
+.pitch{max-width:34em;margin:18px 0 20px;color:var(--muted);font-size:1.1rem}
+.links{display:flex;flex-wrap:wrap;gap:6px 22px}
+a{color:var(--link)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--link);outline-offset:3px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px;margin-top:52px}
+.card{display:block;width:100%;padding:0;text-align:left;font:inherit;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:6px;overflow:hidden;cursor:pointer}
+.card:hover{border-color:var(--ink)}
+.thumb{position:relative;aspect-ratio:16/10;background:var(--blue);display:grid;place-items:center;font-family:Newsreader,Georgia,serif;font-style:italic;font-size:1.3rem;color:var(--ink)}
+.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.card .body{padding:16px 18px 20px}
+.card h2{font-size:1.3rem;line-height:1.2;margin-bottom:6px}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+dialog{border:0;border-radius:8px;padding:0;width:min(940px,calc(100vw - 24px));max-height:calc(100vh - 24px);background:var(--card);color:var(--ink)}
+dialog::backdrop{background:rgba(20,33,61,.6)}
+dialog[open]{animation:in .18s ease-out}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+body:has(dialog[open]){overflow:hidden}
+.dlg{padding:26px 28px 30px}
+.dlg-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:18px}
+.dlg h3{font-size:1.8rem;line-height:1.15}
+.close{flex:none;font:inherit;font-weight:500;background:none;border:1px solid var(--line);border-radius:6px;padding:6px 14px;cursor:pointer;color:var(--ink)}
+.close:hover{border-color:var(--ink)}
+.media{background:var(--paper);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.media img,.media video{display:block;width:100%;height:auto;max-height:60vh;object-fit:contain}
+.media iframe{display:block;width:100%;height:60vh;border:0}
+.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:24px 0 18px}
+.summary h4{margin:0 0 4px;font-size:.95rem;font-weight:600}
+.summary p{margin:0;color:var(--muted);font-size:.98rem}
+.summary .win p{color:var(--ink);font-weight:500}
+.actions{display:flex;flex-wrap:wrap;gap:6px 22px}
+footer{margin-top:64px;color:var(--muted);font-size:.9rem}
+@media (max-width:700px){.summary{grid-template-columns:1fr;gap:16px}.dlg{padding:20px 18px 24px}.media iframe{height:50vh}}
+@media (prefers-reduced-motion:reduce){dialog[open]{animation:none}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <h1>Luis Marull</h1>
+    <p class="pitch">Healthcare operator and Columbia MBA candidate. I’m targeting healthcare operations and commercial real estate roles in New York City.</p>
+    <nav class="links" aria-label="Contact">
+      <a href="https://www.linkedin.com/in/luismarull">LinkedIn</a>
+      <a href="assets/resume.pdf">Resume</a>
+      <a href="mailto:you@example.com">you@example.com</a>
+    </nav>
+  </header>
+
+  <section class="grid" id="grid" aria-label="Selected work"></section>
+
+  <footer>Select any sample to see the details.</footer>
+</main>
+
+<dialog id="dlg" aria-labelledby="dlg-title">
+  <div class="dlg" id="dlg-content"></div>
+</dialog>
+
+<script>
+/* EDIT THIS LIST: one object per sample.
+   type: "image", "pdf", or "video"
+   thumb: card image (optional; the blue block shows if missing)
+   file: what opens when clicked (put files in the assets/ folder)
+   download: optional extra file, such as an .xlsx with anonymized data */
+const items = [
+  {
+    kind: "Excel",
+    title: "Risk adjustment dashboard",
+    result: "[One line: your headline result]",
+    type: "image",
+    thumb: "assets/dashboard-thumb.jpg",
+    file: "assets/dashboard.png",
+    problem: "[What the team could not see or measure]",
+    did: "[What you built and how]",
+    outcome: "[The measurable result]",
+    download: "assets/dashboard.xlsx"
+  },
+  {
+    kind: "P&L",
+    title: "P&L and risk model",
+    result: "[One line: your headline result]",
+    type: "pdf",
+    thumb: "assets/pnl-thumb.jpg",
+    file: "assets/pnl-risk-model.pdf",
+    problem: "[The financial question]",
+    did: "[Your approach and assumptions]",
+    outcome: "[The decision or result it supported]"
+  },
+  {
+    kind: "Case study",
+    title: "Value-based care partnerships",
+    result: "[One line: your headline result]",
+    type: "pdf",
+    thumb: "assets/case-study-thumb.jpg",
+    file: "assets/case-study.pdf",
+    problem: "[The situation]",
+    did: "[Your role and actions]",
+    outcome: "[The result]"
+  },
+  {
+    kind: "AI agent",
+    title: "AI agent in practice",
+    result: "[One line: time or cost saved]",
+    type: "video",
+    thumb: "assets/agent-thumb.jpg",
+    file: "assets/agent-demo.mp4",
+    problem: "[The manual process it replaced]",
+    did: "[How the agent works and what it does]",
+    outcome: "[Hours saved, errors reduced, etc.]"
+  },
+  {
+    kind: "Marketing",
+    title: "Marketing materials",
+    result: "[One line: reach or response]",
+    type: "image",
+    thumb: "assets/marketing-thumb.jpg",
+    file: "assets/marketing.png",
+    problem: "[The audience and goal]",
+    did: "[What you created and with which tools]",
+    outcome: "[The response or result]"
+  }
+];
+
+const grid = document.getElementById("grid");
+const dlg = document.getElementById("dlg");
+const content = document.getElementById("dlg-content");
+
+items.forEach((it, i) => {
+  const b = document.createElement("button");
+  b.className = "card";
+  b.type = "button";
+  b.innerHTML =
+    '<div class="thumb"><span>' + it.kind + '</span>' +
+    (it.thumb ? '<img src="' + it.thumb + '" alt="" loading="lazy" onerror="this.remove()">' : '') +
+    '</div><div class="body"><h2>' + it.title + '</h2><p>' + it.result + '</p></div>';
+  b.addEventListener("click", () => openItem(i));
+  grid.appendChild(b);
+});
+
+function mediaFor(it) {
+  if (it.type === "pdf") return '<iframe src="' + it.file + '" title="' + it.title + '"></iframe>';
+  if (it.type === "video") return '<video src="' + it.file + '" controls playsinline></video>';
+  return '<img src="' + it.file + '" alt="' + it.title + '">';
+}
+
+function openItem(i) {
+  const it = items[i];
+  content.innerHTML =
+    '<div class="dlg-head"><h3 id="dlg-title">' + it.title + '</h3>' +
+    '<button class="close" type="button" id="close">Close</button></div>' +
+    '<div class="media">' + mediaFor(it) + '</div>' +
+    '<div class="summary">' +
+      '<div><h4>Problem</h4><p>' + it.problem + '</p></div>' +
+      '<div><h4>What I did</h4><p>' + it.did + '</p></div>' +
+      '<div class="win"><h4>Result</h4><p>' + it.outcome + '</p></div>' +
+    '</div>' +
+    '<div class="actions"><a href="' + it.file + '" target="_blank" rel="noopener">Open full size</a>' +
+    (it.download ? '<a href="' + it.download + '" download>Download the file</a>' : '') + '</div>';
+  document.getElementById("close").addEventListener("click", () => dlg.close());
+  dlg.showModal();
+}
+
+dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+dlg.addEventListener("close", () => { content.innerHTML = ""; });
+</script>
+</body>
+</html>
