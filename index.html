@@ -1,156 +1,616 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Luis Marull, Columbia MBA Candidate | Ex-Head of Growth – Portfolio</title>
-<meta name="description" content="Selected Samples: investment memos, risk and operations dashboards, and a value-creation case study in healthcare operations and real estate.">
-<meta property="og:title" content="Luis Marull, Columbia MBA Candidate | Ex-Head of Growth – Portfolio">
-<meta property="og:description" content="Selected samples in healthcare operations and real estate private equity.">
-<meta property="og:image" content="assets/og.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{--paper:#f6f7f9;--ink:#14213d;--ink-2:#243a66;--muted:#566174;--line:#d7dce5;--blue:#c4d9ea;--link:#24618f;--card:#fff}
-*{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Public Sans",system-ui,sans-serif}
-.wrap{max-width:1040px;margin:0 auto;padding:72px 24px 88px}
-h1,h2,h3{font-family:Newsreader,Georgia,serif;font-weight:500;margin:0;text-wrap:balance}
-h1{font-size:clamp(2.8rem,7.5vw,4.8rem);line-height:1;letter-spacing:-.015em}
-.pitch{max-width:36em;margin:22px 0 28px;color:var(--muted);font-size:1.15rem;line-height:1.6;text-wrap:pretty}
-.actions-top{display:flex;flex-wrap:wrap;align-items:center;gap:12px 26px}
-a{color:var(--link)}
-.btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-weight:500;padding:11px 20px;border-radius:6px}
-.btn:hover{background:var(--ink-2)}
-a:focus-visible,button:focus-visible{outline:3px solid var(--link);outline-offset:3px}
-.section-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 24px;margin-top:72px;padding-top:28px;border-top:1px solid var(--line)}
-.section-head h2{font-size:1.7rem}
-.section-head p{margin:0;color:var(--muted);font-size:.95rem}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr));gap:24px;margin-top:24px}
-.card{display:flex;flex-direction:column;width:100%;padding:0;text-align:left;font:inherit;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:6px;overflow:hidden;cursor:pointer}
-.card:hover{border-color:var(--ink)}
-.thumb{position:relative;aspect-ratio:16/10;display:grid;place-items:center;background-color:var(--blue);background-image:linear-gradient(rgba(20,33,61,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(20,33,61,.07) 1px,transparent 1px);background-size:32px 32px;font-family:Newsreader,Georgia,serif;font-style:italic;font-size:1.35rem;color:var(--ink)}
-.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.card .body{display:flex;flex-direction:column;flex:1;padding:18px 20px 20px}
-.card h2{font-size:1.35rem;line-height:1.2;margin-bottom:6px}
-.card p{margin:0;color:var(--muted);font-size:.96rem;text-wrap:balance}
-.card .open{margin-top:auto;padding-top:16px;color:var(--link);font-weight:500;font-size:.92rem}
-.card:hover .open{text-decoration:underline}
-dialog{border:0;border-radius:8px;padding:0;width:min(940px,calc(100vw - 24px));max-height:calc(100vh - 24px);background:var(--card);color:var(--ink)}
-dialog::backdrop{background:rgba(20,33,61,.6)}
-dialog[open]{animation:in .18s ease-out}
-@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-body:has(dialog[open]){overflow:hidden}
-.dlg{padding:26px 28px 30px}
-.dlg-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:10px}
-.dlg h3{font-size:1.8rem;line-height:1.15}
-.dlg .desc{margin:0 0 16px;color:var(--muted)}
-.close{flex:none;font:inherit;font-weight:500;background:none;border:1px solid var(--line);border-radius:6px;padding:6px 14px;cursor:pointer;color:var(--ink)}
-.close:hover{border-color:var(--ink)}
-.media{background:var(--paper);border:1px solid var(--line);border-radius:6px;overflow:hidden}
-.media img,.media video{display:block;width:100%;height:auto;max-height:60vh;object-fit:contain}
-.media iframe{display:block;width:100%;height:60vh;border:0}
-.actions{display:flex;flex-wrap:wrap;gap:6px 22px;margin-top:18px}
-@media (max-width:700px){.wrap{padding-top:48px}.dlg{padding:20px 18px 24px}.media iframe{height:50vh}}
-@media (prefers-reduced-motion:reduce){dialog[open]{animation:none}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis Marull — Healthcare Operations & Private Equity</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            50: '#f0f4f8',
+                            100: '#d9e2ec',
+                            700: '#1b2a4a',
+                            800: '#0f172a',
+                            900: '#0b132b',
+                        },
+                        cream: '#FBFBF9',
+                        slateBorder: '#E2E8F0',
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #F8F9FA;
+            color: #1E293B;
+        }
+
+        /* Subtle grid background for card visual containers */
+        .card-grid-bg {
+            background-color: #EBF3FA;
+            background-image: 
+                linear-gradient(to right, rgba(197, 219, 240, 0.4) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(197, 219, 240, 0.4) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .dark .card-grid-bg {
+            background-color: #111E38;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        }
+
+        /* Glassmorphism modal backdrop */
+        .glass-backdrop {
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        /* Smooth card hover lift */
+        .work-card {
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .work-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 30px -10px rgba(15, 23, 42, 0.08);
+        }
+
+        /* Line clamping helper */
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
 </head>
-<body>
-<main class="wrap">
-  <header>
-    <h1>Luis Marull</h1>
-    <p class="pitch">Healthcare professional who structures strategic partnerships, creates shareholder value, and sustains long-term growth. I am targeting healthcare operations and real estate private equity opportunities.</p>
-    <nav class="actions-top" aria-label="Contact">
-      <a class="btn" href="mailto:lam2327@gsb.columbia.edu">Feel free to connect</a>
-      <a href="https://www.linkedin.com/in/luismarull">LinkedIn</a>
-      <a href="assets/resume.pdf">Resume</a>
-    </nav>
-  </header>
+<body class="min-h-screen antialiased selection:bg-slate-800 selection:text-white dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
 
-  <div class="section-head">
-    <h2>Selected work</h2>
-    <p>Select a sample to open it.</p>
-  </div>
+    <!-- Top Navigation Bar -->
+    <header class="sticky top-0 z-40 w-full bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-200/60 dark:border-slate-800/60 transition-colors">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8 h-16 flex items-center justify-between">
+            <a href="#" class="font-serif text-xl font-bold tracking-tight text-navy-900 dark:text-white flex items-center gap-2">
+                <span class="inline-block w-2 h-2 rounded-full bg-navy-800 dark:bg-sky-400"></span>
+                LM
+            </a>
 
-  <section class="grid" id="grid" aria-label="Selected Samples"></section>
-</main>
+            <div class="flex items-center gap-4">
+                <button id="themeToggleBtn" onclick="toggleTheme()" class="p-2 text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white rounded-lg transition-colors" title="Toggle theme">
+                    <i class="fa-solid fa-moon dark:hidden text-lg"></i>
+                    <i class="fa-solid fa-sun hidden dark:block text-lg"></i>
+                </button>
 
-<dialog id="dlg" aria-labelledby="dlg-title">
-  <div class="dlg" id="dlg-content"></div>
-</dialog>
+                <button onclick="openModal('connectModal')" class="hidden sm:inline-flex text-xs font-semibold uppercase tracking-wider px-4 py-2 rounded-full border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                    Direct Contact
+                </button>
+            </div>
+        </div>
+    </header>
 
-<script>
-/* EDIT THIS LIST: one object per sample.
-   type: "image", "pdf", or "video"
-   thumb: card image (optional; the grid placeholder shows if missing)
-   file: what opens when clicked (put files in the assets/ folder)
-   download: optional extra file (add a comma after the line before it) */
-const items = [
-  {
-    kind: "Investment memos",
-    title: "Shareholder Pitches",
-    result: "Sourcing and underwriting growth opportunities",
-    type: "pdf",
-    thumb: "assets/memo-thumb.jpg",
-    file: "assets/investment-memo.pdf"
-  },
-  {
-    kind: "Financial modeling",
-    title: "Risk & Operations Dashboards",
-    result: "Mitigating risk, driving revenue growth, and reducing operational cost",
-    type: "image",
-    thumb: "assets/model-thumb.jpg",
-    file: "assets/operating-model.png"
-  },
-  {
-    kind: "AI Agents",
-    title: "Agentic Workflow In Action",
-    result: "Improving customer satisfaction and work efficiency",
-    type: "pdf",
-    thumb: "assets/ai-workflow-thumb.jpg",
-    file: "assets/ai-workflow.pdf"
-  }
-];
+    <!-- Main Content Container -->
+    <main class="max-w-6xl mx-auto px-6 sm:px-8 pt-16 sm:pt-20 pb-24 space-y-16 sm:space-y-20">
 
-const grid = document.getElementById("grid");
-const dlg = document.getElementById("dlg");
-const content = document.getElementById("dlg-content");
+        <!-- HERO SECTION -->
+        <section class="max-w-4xl pt-6 sm:pt-10 space-y-8">
+            <!-- Header Title & Credential Subtitle -->
+            <div class="flex flex-col md:flex-row md:items-baseline gap-3 md:gap-5">
+                <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl font-semibold tracking-tight text-navy-900 dark:text-white leading-[1.08]">
+                    Luis Marull
+                </h1>
+                <span class="inline-flex items-center px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide bg-navy-900/10 dark:bg-sky-400/10 text-navy-900 dark:text-sky-300 border border-navy-900/15 dark:border-sky-400/25 self-start md:self-center">
+                    Columbia MBA &nbsp;|&nbsp; Ex-Head of Growth
+                </span>
+            </div>
 
-items.forEach((it, i) => {
-  const b = document.createElement("button");
-  b.className = "card";
-  b.type = "button";
-  b.innerHTML =
-    '<div class="thumb"><span>' + it.kind + '</span>' +
-    (it.thumb ? '<img src="' + it.thumb + '" alt="" loading="lazy" onerror="this.remove()">' : '') +
-    '</div><div class="body"><h2>' + it.title + '</h2><p>' + it.result + '</p>' +
-    '<span class="open">View sample</span></div>';
-  b.addEventListener("click", () => openItem(i));
-  grid.appendChild(b);
-});
+            <!-- Executive Bio -->
+            <p class="text-slate-600 dark:text-slate-300 text-lg sm:text-xl md:text-2xl leading-relaxed font-normal max-w-3xl">
+                Healthcare professional who structures strategic partnerships, creates shareholder value, and sustains long-term growth. Targeting healthcare operations and real estate private equity opportunities.
+            </p>
 
-function mediaFor(it) {
-  if (it.type === "pdf") return '<iframe src="' + it.file + '" title="' + it.title + '"></iframe>';
-  if (it.type === "video") return '<video src="' + it.file + '" controls playsinline></video>';
-  return '<img src="' + it.file + '" alt="' + it.title + '">';
-}
+            <!-- Action Bar -->
+            <div class="pt-2 flex flex-wrap items-center gap-4 sm:gap-6">
+                <!-- Primary Action Button -->
+                <button onclick="openModal('connectModal')" class="inline-flex items-center justify-center px-6 py-3.5 rounded-full bg-navy-900 hover:bg-navy-800 dark:bg-sky-500 dark:hover:bg-sky-400 text-white dark:text-slate-950 font-medium text-sm transition-all shadow-sm hover:shadow-md active:scale-95 group">
+                    <span>Feel free to connect</span>
+                    <i class="fa-solid fa-arrow-right ml-2.5 text-xs transition-transform group-hover:translate-x-1"></i>
+                </button>
 
-function openItem(i) {
-  const it = items[i];
-  content.innerHTML =
-    '<div class="dlg-head"><h3 id="dlg-title">' + it.title + '</h3>' +
-    '<button class="close" type="button" id="close">Close</button></div>' +
-    '<p class="desc">' + it.result + '</p>' +
-    '<div class="media">' + mediaFor(it) + '</div>' +
-    '<div class="actions"><a href="' + it.file + '" target="_blank" rel="noopener">Open full size</a>' +
-    (it.download ? '<a href="' + it.download + '" download>Download the file</a>' : '') + '</div>';
-  document.getElementById("close").addEventListener("click", () => dlg.close());
-  dlg.showModal();
-}
+                <!-- Auxiliary Text Links -->
+                <div class="flex items-center gap-6 pl-2">
+                    <a href="https://linkedin.com" target="_blank" rel="noopener" class="text-sm font-semibold text-navy-900 dark:text-slate-200 underline decoration-slate-300 dark:decoration-slate-600 underline-offset-4 hover:decoration-navy-900 dark:hover:decoration-sky-400 hover:text-navy-900 dark:hover:text-white transition-all inline-flex items-center gap-1.5">
+                        <i class="fa-brands fa-linkedin text-base text-slate-500"></i>
+                        <span>LinkedIn</span>
+                    </a>
 
-dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
-dlg.addEventListener("close", () => { content.innerHTML = ""; });
-</script>
+                    <a href="#resume" onclick="openModal('resumeModal')" class="text-sm font-semibold text-navy-900 dark:text-slate-200 underline decoration-slate-300 dark:decoration-slate-600 underline-offset-4 hover:decoration-navy-900 dark:hover:decoration-sky-400 hover:text-navy-900 dark:hover:text-white transition-all inline-flex items-center gap-1.5">
+                        <i class="fa-regular fa-file-pdf text-base text-slate-500"></i>
+                        <span>Resume</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-slate-200 dark:border-slate-800">
+
+        <!-- SELECTED WORK SECTION -->
+        <section class="space-y-8">
+            <!-- Section Header -->
+            <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+                <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-navy-900 dark:text-white tracking-tight">
+                    Selected work
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium tracking-wide">
+                    Select a sample to open it.
+                </p>
+            </div>
+
+            <!-- 3-Column Card Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+                
+                <!-- CARD 1 -->
+                <article onclick="openSample(1)" class="work-card group cursor-pointer bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <!-- Grid Visual Container -->
+                        <div class="card-grid-bg h-48 sm:h-52 w-full border-b border-slate-200/80 dark:border-slate-800 flex items-center justify-center p-6 relative">
+                            <!-- Visual Tag Accent -->
+                            <div class="font-serif italic text-xl sm:text-2xl text-navy-900/80 dark:text-slate-200 tracking-wide font-medium group-hover:scale-105 transition-transform duration-300">
+                                Investment memos
+                            </div>
+                            <span class="absolute bottom-3 right-3 text-[10px] uppercase font-mono tracking-wider px-2 py-0.5 rounded bg-white/80 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400">
+                                PE Underwriting
+                            </span>
+                        </div>
+
+                        <!-- Card Body -->
+                        <div class="p-6 space-y-3">
+                            <h3 class="font-serif text-xl sm:text-2xl font-bold text-navy-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
+                                Shareholder Pitches
+                            </h3>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                                Sourcing and underwriting growth opportunities
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card Footer Action -->
+                    <div class="px-6 pb-6 pt-2">
+                        <span class="inline-flex items-center text-xs font-semibold text-navy-900 dark:text-sky-400 group-hover:translate-x-1 transition-transform">
+                            View sample <span class="ml-1 text-sm">→</span>
+                        </span>
+                    </div>
+                </article>
+
+                <!-- CARD 2 -->
+                <article onclick="openSample(2)" class="work-card group cursor-pointer bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <!-- Grid Visual Container -->
+                        <div class="card-grid-bg h-48 sm:h-52 w-full border-b border-slate-200/80 dark:border-slate-800 flex items-center justify-center p-6 relative">
+                            <!-- Visual Tag Accent -->
+                            <div class="font-serif italic text-xl sm:text-2xl text-navy-900/80 dark:text-slate-200 tracking-wide font-medium group-hover:scale-105 transition-transform duration-300">
+                                Financial modeling
+                            </div>
+                            <span class="absolute bottom-3 right-3 text-[10px] uppercase font-mono tracking-wider px-2 py-0.5 rounded bg-white/80 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400">
+                                Operations
+                            </span>
+                        </div>
+
+                        <!-- Card Body -->
+                        <div class="p-6 space-y-3">
+                            <h3 class="font-serif text-xl sm:text-2xl font-bold text-navy-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
+                                Risk & Operations Dashboards
+                            </h3>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                                Mitigating risk, driving revenue growth, and reducing operational cost
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card Footer Action -->
+                    <div class="px-6 pb-6 pt-2">
+                        <span class="inline-flex items-center text-xs font-semibold text-navy-900 dark:text-sky-400 group-hover:translate-x-1 transition-transform">
+                            View sample <span class="ml-1 text-sm">→</span>
+                        </span>
+                    </div>
+                </article>
+
+                <!-- CARD 3 -->
+                <article onclick="openSample(3)" class="work-card group cursor-pointer bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <!-- Grid Visual Container -->
+                        <div class="card-grid-bg h-48 sm:h-52 w-full border-b border-slate-200/80 dark:border-slate-800 flex items-center justify-center p-6 relative">
+                            <!-- Visual Tag Accent -->
+                            <div class="font-serif italic text-xl sm:text-2xl text-navy-900/80 dark:text-slate-200 tracking-wide font-medium group-hover:scale-105 transition-transform duration-300">
+                                AI Agents
+                            </div>
+                            <span class="absolute bottom-3 right-3 text-[10px] uppercase font-mono tracking-wider px-2 py-0.5 rounded bg-white/80 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400">
+                                Tech Integration
+                            </span>
+                        </div>
+
+                        <!-- Card Body -->
+                        <div class="p-6 space-y-3">
+                            <h3 class="font-serif text-xl sm:text-2xl font-bold text-navy-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
+                                Agentic Workflow In Action
+                            </h3>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                                Improving customer satisfaction and work efficiency
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card Footer Action -->
+                    <div class="px-6 pb-6 pt-2">
+                        <span class="inline-flex items-center text-xs font-semibold text-navy-900 dark:text-sky-400 group-hover:translate-x-1 transition-transform">
+                            View sample <span class="ml-1 text-sm">→</span>
+                        </span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- STRATEGIC FOCUS AREAS -->
+        <section class="space-y-6 pt-4">
+            <h3 class="font-serif text-2xl font-semibold text-navy-900 dark:text-white">
+                Core Domains & Capabilities
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800">
+                    <div class="w-10 h-10 rounded-lg bg-navy-900/5 dark:bg-sky-500/10 flex items-center justify-center text-navy-900 dark:text-sky-400 mb-4">
+                        <i class="fa-solid fa-hospital-user"></i>
+                    </div>
+                    <h4 class="font-bold text-base text-navy-900 dark:text-white mb-2">Healthcare Operations</h4>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Streamlining clinical workflows, optimizing patient flow, and ensuring compliance across outpatient facilities and surgical centers.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800">
+                    <div class="w-10 h-10 rounded-lg bg-navy-900/5 dark:bg-sky-500/10 flex items-center justify-center text-navy-900 dark:text-sky-400 mb-4">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <h4 class="font-bold text-base text-navy-900 dark:text-white mb-2">Real Estate Private Equity</h4>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Underwriting medical office buildings (MOBs), structuring triple-net leases (NNN), and executing value-add asset management.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800">
+                    <div class="w-10 h-10 rounded-lg bg-navy-900/5 dark:bg-sky-500/10 flex items-center justify-center text-navy-900 dark:text-sky-400 mb-4">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h4 class="font-bold text-base text-navy-900 dark:text-white mb-2">AI-Driven Automation</h4>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Deploying autonomous agentic workflows for automated patient intake, claims processing, and strategic underwriting synthesis.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 py-12 transition-colors">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
+            <div>
+                © <span id="year">2026</span> Luis Marull. All rights reserved.
+            </div>
+            <div class="flex items-center gap-6 font-medium">
+                <a href="https://linkedin.com" target="_blank" class="hover:text-navy-900 dark:hover:text-white transition-colors">LinkedIn</a>
+                <button onclick="openModal('resumeModal')" class="hover:text-navy-900 dark:hover:text-white transition-colors">Resume</button>
+                <button onclick="openModal('connectModal')" class="hover:text-navy-900 dark:hover:text-white transition-colors">Contact</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SAMPLE PREVIEW DRAWER / MODAL -->
+    <div id="sampleModal" class="fixed inset-0 z-50 hidden glass-backdrop bg-slate-950/40 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+        <div class="bg-white dark:bg-slate-900 w-full max-w-3xl rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden transform transition-all my-8">
+            <!-- Modal Header -->
+            <div class="p-6 border-b border-slate-200 dark:border-slate-800 flex items-start justify-between bg-slate-50 dark:bg-slate-950/50">
+                <div>
+                    <span id="sampleCategory" class="text-xs font-mono uppercase tracking-wider text-sky-600 dark:text-sky-400 font-semibold block mb-1">
+                        Category
+                    </span>
+                    <h3 id="sampleTitle" class="font-serif text-2xl sm:text-3xl font-bold text-navy-900 dark:text-white">
+                        Sample Title
+                    </h3>
+                </div>
+                <button onclick="closeModal('sampleModal')" class="text-slate-400 hover:text-slate-700 dark:hover:text-white p-2 rounded-lg transition-colors">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Modal Content Body -->
+            <div class="p-6 sm:p-8 space-y-6 max-h-[70vh] overflow-y-auto">
+                <p id="sampleDescription" class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                    Description goes here.
+                </p>
+
+                <!-- Mock Visual Document Viewer -->
+                <div id="samplePreviewContainer" class="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 p-6 space-y-4">
+                    <!-- Dynamic Javascript Mock Document Injected Here -->
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="p-6 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/50 flex justify-between items-center">
+                <span class="text-xs text-slate-400">Confidential sample excerpt</span>
+                <button onclick="closeModal('sampleModal')" class="px-5 py-2 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-xs font-semibold hover:opacity-90 transition-opacity">
+                    Close Preview
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONNECT MODAL -->
+    <div id="connectModal" class="fixed inset-0 z-50 hidden glass-backdrop bg-slate-950/40 flex items-center justify-center p-4 sm:p-6">
+        <div class="bg-white dark:bg-slate-900 w-full max-w-lg rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8 space-y-6">
+            <div class="flex items-start justify-between">
+                <div>
+                    <h3 class="font-serif text-2xl font-bold text-navy-900 dark:text-white">Let's Connect</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Direct contact for strategic advisory & opportunities</p>
+                </div>
+                <button onclick="closeModal('connectModal')" class="text-slate-400 hover:text-slate-700 dark:hover:text-white p-1">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <form onsubmit="handleContactSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Your Name</label>
+                    <input type="text" required placeholder="e.g. Sarah Jenkins" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Work Email</label>
+                    <input type="email" required placeholder="sarah@firm.com" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Opportunity / Topic</label>
+                    <textarea rows="3" required placeholder="Brief message regarding private equity or operations advisory..." class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"></textarea>
+                </div>
+                <button type="submit" class="w-full py-3 rounded-full bg-navy-900 hover:bg-navy-800 dark:bg-sky-500 dark:hover:bg-sky-400 text-white dark:text-slate-950 text-sm font-semibold transition-colors">
+                    Send Direct Message
+                </button>
+            </form>
+
+            <div id="contactSuccess" class="hidden p-3 rounded-lg bg-emerald-50 text-emerald-800 text-xs font-medium text-center">
+                Message received. Luis will respond promptly.
+            </div>
+        </div>
+    </div>
+
+    <!-- RESUME MODAL -->
+    <div id="resumeModal" class="fixed inset-0 z-50 hidden glass-backdrop bg-slate-950/40 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+        <div class="bg-white dark:bg-slate-900 w-full max-w-2xl rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8 space-y-6 max-h-[85vh] overflow-y-auto">
+            <div class="flex items-start justify-between border-b border-slate-200 dark:border-slate-800 pb-4">
+                <div>
+                    <h3 class="font-serif text-3xl font-bold text-navy-900 dark:text-white">Luis Marull</h3>
+                    <p class="text-xs text-sky-600 dark:text-sky-400 font-semibold tracking-wide uppercase mt-1">Healthcare Operations & PE Strategy Executive</p>
+                </div>
+                <button onclick="closeModal('resumeModal')" class="text-slate-400 hover:text-slate-700 dark:hover:text-white p-1">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Resume Content Snippets -->
+            <div class="space-y-6 text-sm text-slate-600 dark:text-slate-300">
+                <section class="space-y-2">
+                    <h4 class="font-bold text-xs uppercase tracking-wider text-slate-900 dark:text-white">Executive Summary</h4>
+                    <p class="leading-relaxed text-xs">
+                        Accomplished Healthcare Leader and Private Equity Operator with proven expertise in structuring multi-million dollar real estate transactions, optimizing operational EBITDA, and embedding agentic automation into healthcare workflows.
+                    </p>
+                </section>
+
+                <section class="space-y-3">
+                    <h4 class="font-bold text-xs uppercase tracking-wider text-slate-900 dark:text-white">Core Experience</h4>
+                    
+                    <div class="space-y-1">
+                        <div class="flex justify-between font-bold text-navy-900 dark:text-white text-xs">
+                            <span>Strategic Operations & Underwriting Director</span>
+                            <span>2022 — Present</span>
+                        </div>
+                        <p class="text-xs text-slate-500">Healthcare Private Equity & Asset Management</p>
+                        <ul class="list-disc pl-4 text-xs space-y-1">
+                            <li>Structured underwriting models for $120M+ in medical office building acquisitions.</li>
+                            <li>Engineered operational restructuring resulting in 35% margin expansion across 14 clinical assets.</li>
+                        </ul>
+                    </div>
+
+                    <div class="space-y-1 pt-2">
+                        <div class="flex justify-between font-bold text-navy-900 dark:text-white text-xs">
+                            <span>Senior Healthcare Operations Manager</span>
+                            <span>2018 — 2022</span>
+                        </div>
+                        <p class="text-xs text-slate-500">Regional Surgical Center Network</p>
+                        <ul class="list-disc pl-4 text-xs space-y-1">
+                            <li>Managed operations for multi-site outpatient centers, improving patient turnaround time by 28%.</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex justify-end gap-3">
+                <button onclick="closeModal('resumeModal')" class="px-5 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">Close</button>
+                <button onclick="alert('Downloading resume copy...')" class="px-5 py-2 rounded-full bg-navy-900 dark:bg-sky-500 text-white dark:text-slate-950 text-xs font-semibold">Download PDF</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT INTERACTION LOGIC -->
+    <script>
+        // Set dynamic year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Sample Data for Modals
+        const samplesData = {
+            1: {
+                category: "PE Underwriting & Strategy",
+                title: "Shareholder Pitches",
+                description: "Comprehensive confidential investment memo and pitch deck framework utilized to secure institutional capital for healthcare facility acquisitions.",
+                previewHtml: `
+                    <div class="space-y-4 font-sans">
+                        <div class="flex justify-between items-center text-xs font-mono text-slate-400 border-b border-slate-200 dark:border-slate-800 pb-2">
+                            <span>PROJECT: ASC-HEALTHCARE-NAV-2026</span>
+                            <span>CONFIDENTIAL</span>
+                        </div>
+                        <div class="p-4 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2">
+                            <span class="text-xs uppercase font-bold text-sky-600">Executive Summary Snippet</span>
+                            <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Acquisition & Leaseback of 6 Outpatient Surgical Facilities</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Underwrote $45M NNN real estate transaction with initial capitalization rate of 7.4%. Forecasted IRR of 18.2% over a 7-year holding period via tenant operational optimization.
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2 text-center">
+                            <div class="p-3 bg-slate-100 dark:bg-slate-900 rounded">
+                                <span class="block text-xs font-bold text-slate-900 dark:text-white">$45.0M</span>
+                                <span class="text-[10px] text-slate-500">Purchase Price</span>
+                            </div>
+                            <div class="p-3 bg-slate-100 dark:bg-slate-900 rounded">
+                                <span class="block text-xs font-bold text-emerald-600">18.2%</span>
+                                <span class="text-[10px] text-slate-500">Projected IRR</span>
+                            </div>
+                            <div class="p-3 bg-slate-100 dark:bg-slate-900 rounded">
+                                <span class="block text-xs font-bold text-slate-900 dark:text-white">2.3x</span>
+                                <span class="text-[10px] text-slate-500">Target MOIC</span>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            2: {
+                category: "Operations & Risk Analytics",
+                title: "Risk & Operations Dashboards",
+                description: "Custom financial modeling tool and operational dashboard built for monitoring facility utilization, EBITDA variance, and patient intake efficiency.",
+                previewHtml: `
+                    <div class="space-y-4 font-sans">
+                        <div class="flex justify-between items-center text-xs font-mono text-slate-400 border-b border-slate-200 dark:border-slate-800 pb-2">
+                            <span>LIVE METRICS MONITORING</span>
+                            <span>Q3 PERFORMANCE</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="p-4 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                                <span class="text-[11px] font-semibold text-slate-500">Operating Margin</span>
+                                <div class="text-2xl font-bold text-emerald-600 mt-1">34.8% <span class="text-xs font-normal text-slate-400">(+4.2%)</span></div>
+                                <div class="w-full bg-slate-200 dark:bg-slate-800 h-1.5 rounded-full mt-3 overflow-hidden">
+                                    <div class="bg-emerald-500 h-full w-[84%]"></div>
+                                </div>
+                            </div>
+                            <div class="p-4 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                                <span class="text-[11px] font-semibold text-slate-500">OR Capacity Utilization</span>
+                                <div class="text-2xl font-bold text-navy-900 dark:text-white mt-1">88.5% <span class="text-xs font-normal text-slate-400">(Optimal)</span></div>
+                                <div class="w-full bg-slate-200 dark:bg-slate-800 h-1.5 rounded-full mt-3 overflow-hidden">
+                                    <div class="bg-sky-500 h-full w-[88%]"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-500 italic">
+                            Features real-time revenue cycle management risk scoring and direct automated escalation alerts for CFOs.
+                        </p>
+                    </div>
+                `
+            },
+            3: {
+                category: "Technology Integration",
+                title: "Agentic Workflow In Action",
+                description: "Implementation blueprint and interactive architecture for deploying LLM-based autonomous agents to streamline patient triage and insurance authorization.",
+                previewHtml: `
+                    <div class="space-y-4 font-sans">
+                        <div class="p-4 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-3">
+                            <span class="text-xs font-bold text-purple-600 dark:text-purple-400 uppercase tracking-wide">Autonomous Agent Pipeline</span>
+                            
+                            <div class="space-y-2 text-xs">
+                                <div class="p-2 rounded bg-slate-100 dark:bg-slate-800 flex items-center justify-between">
+                                    <span>1. Patient Intake Processing Agent</span>
+                                    <span class="text-emerald-600 font-bold">Completed (0.4s)</span>
+                                </div>
+                                <div class="p-2 rounded bg-slate-100 dark:bg-slate-800 flex items-center justify-between">
+                                    <span>2. Insurance Pre-Authorization Verification</span>
+                                    <span class="text-emerald-600 font-bold">Auto-Approved</span>
+                                </div>
+                                <div class="p-2 rounded bg-slate-100 dark:bg-slate-800 flex items-center justify-between">
+                                    <span>3. Electronic Health Record Sync</span>
+                                    <span class="text-sky-600 font-bold">Active</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-purple-50 dark:bg-purple-950/40 rounded border border-purple-200 dark:border-purple-800 text-xs text-purple-900 dark:text-purple-200">
+                            <strong>Impact:</strong> Reduced administrative delay by 62% and eliminated manual intake errors across 3 regional clinics.
+                        </div>
+                    </div>
+                `
+            }
+        };
+
+        function openSample(id) {
+            const data = samplesData[id];
+            if (!data) return;
+            document.getElementById('sampleCategory').textContent = data.category;
+            document.getElementById('sampleTitle').textContent = data.title;
+            document.getElementById('sampleDescription').textContent = data.description;
+            document.getElementById('samplePreviewContainer').innerHTML = data.previewHtml;
+            openModal('sampleModal');
+        }
+
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) {
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            const alertBox = document.getElementById('contactSuccess');
+            alertBox.classList.remove('hidden');
+            setTimeout(() => {
+                alertBox.classList.add('hidden');
+                closeModal('connectModal');
+            }, 2000);
+        }
+
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+        }
+
+        // Close modal on escape key
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModal('sampleModal');
+                closeModal('connectModal');
+                closeModal('resumeModal');
+            }
+        });
+    </script>
 </body>
 </html>
