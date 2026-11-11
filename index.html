@@ -4,32 +4,39 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Luis Marull – Portfolio</title>
-<meta name="description" content="Selected work: platform investment memo, operating model, and value-creation case study in healthcare operations and real estate.">
+<meta name="description" content="Selected work: investment memos, risk and operations dashboards, and a value-creation case study in healthcare operations and real estate.">
 <meta property="og:title" content="Luis Marull – Portfolio">
 <meta property="og:description" content="Selected work in healthcare operations and real estate private equity.">
 <meta property="og:image" content="assets/og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--paper:#f6f7f9;--ink:#14213d;--muted:#566174;--line:#d7dce5;--blue:#b9d9eb;--link:#24618f;--card:#fff}
+:root{--paper:#f6f7f9;--ink:#14213d;--ink-2:#243a66;--muted:#566174;--line:#d7dce5;--blue:#c4d9ea;--link:#24618f;--card:#fff}
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.55 "Public Sans",system-ui,sans-serif}
-.wrap{max-width:1040px;margin:0 auto;padding:64px 24px 80px}
-h1,h2,h3{font-family:Newsreader,Georgia,serif;font-weight:500;margin:0}
-h1{font-size:clamp(2.6rem,7vw,4.4rem);line-height:1.02;letter-spacing:-.01em}
-.pitch{max-width:34em;margin:18px 0 20px;color:var(--muted);font-size:1.1rem}
-.links{display:flex;flex-wrap:wrap;gap:6px 22px}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Public Sans",system-ui,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:72px 24px 88px}
+h1,h2,h3{font-family:Newsreader,Georgia,serif;font-weight:500;margin:0;text-wrap:balance}
+h1{font-size:clamp(2.8rem,7.5vw,4.8rem);line-height:1;letter-spacing:-.015em}
+.pitch{max-width:36em;margin:22px 0 28px;color:var(--muted);font-size:1.15rem;line-height:1.6;text-wrap:pretty}
+.actions-top{display:flex;flex-wrap:wrap;align-items:center;gap:12px 26px}
 a{color:var(--link)}
+.btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-weight:500;padding:11px 20px;border-radius:6px}
+.btn:hover{background:var(--ink-2)}
 a:focus-visible,button:focus-visible{outline:3px solid var(--link);outline-offset:3px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px;margin-top:52px}
-.card{display:block;width:100%;padding:0;text-align:left;font:inherit;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:6px;overflow:hidden;cursor:pointer}
+.section-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 24px;margin-top:72px;padding-top:28px;border-top:1px solid var(--line)}
+.section-head h2{font-size:1.7rem}
+.section-head p{margin:0;color:var(--muted);font-size:.95rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr));gap:24px;margin-top:24px}
+.card{display:flex;flex-direction:column;width:100%;padding:0;text-align:left;font:inherit;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:6px;overflow:hidden;cursor:pointer}
 .card:hover{border-color:var(--ink)}
-.thumb{position:relative;aspect-ratio:16/10;background:var(--blue);display:grid;place-items:center;font-family:Newsreader,Georgia,serif;font-style:italic;font-size:1.3rem;color:var(--ink)}
+.thumb{position:relative;aspect-ratio:16/10;display:grid;place-items:center;background-color:var(--blue);background-image:linear-gradient(rgba(20,33,61,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(20,33,61,.07) 1px,transparent 1px);background-size:32px 32px;font-family:Newsreader,Georgia,serif;font-style:italic;font-size:1.35rem;color:var(--ink)}
 .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.card .body{padding:16px 18px 20px}
-.card h2{font-size:1.3rem;line-height:1.2;margin-bottom:6px}
-.card p{margin:0;color:var(--muted);font-size:.95rem}
+.card .body{display:flex;flex-direction:column;flex:1;padding:18px 20px 20px}
+.card h2{font-size:1.35rem;line-height:1.2;margin-bottom:6px}
+.card p{margin:0;color:var(--muted);font-size:.96rem;text-wrap:balance}
+.card .open{margin-top:auto;padding-top:16px;color:var(--link);font-weight:500;font-size:.92rem}
+.card:hover .open{text-decoration:underline}
 dialog{border:0;border-radius:8px;padding:0;width:min(940px,calc(100vw - 24px));max-height:calc(100vh - 24px);background:var(--card);color:var(--ink)}
 dialog::backdrop{background:rgba(20,33,61,.6)}
 dialog[open]{animation:in .18s ease-out}
@@ -45,8 +52,7 @@ body:has(dialog[open]){overflow:hidden}
 .media img,.media video{display:block;width:100%;height:auto;max-height:60vh;object-fit:contain}
 .media iframe{display:block;width:100%;height:60vh;border:0}
 .actions{display:flex;flex-wrap:wrap;gap:6px 22px;margin-top:18px}
-footer{margin-top:64px;color:var(--muted);font-size:.9rem}
-@media (max-width:700px){.dlg{padding:20px 18px 24px}.media iframe{height:50vh}}
+@media (max-width:700px){.wrap{padding-top:48px}.dlg{padding:20px 18px 24px}.media iframe{height:50vh}}
 @media (prefers-reduced-motion:reduce){dialog[open]{animation:none}}
 </style>
 </head>
@@ -55,16 +61,19 @@ footer{margin-top:64px;color:var(--muted);font-size:.9rem}
   <header>
     <h1>Luis Marull</h1>
     <p class="pitch">Healthcare professional who structures strategic partnerships, creates shareholder value, and sustains long-term growth. I am targeting healthcare operations and real estate private equity opportunities.</p>
-    <nav class="links" aria-label="Contact">
+    <nav class="actions-top" aria-label="Contact">
+      <a class="btn" href="mailto:lam2327@gsb.columbia.edu">Feel free to connect</a>
       <a href="https://www.linkedin.com/in/luismarull">LinkedIn</a>
       <a href="assets/resume.pdf">Resume</a>
-      <a href="mailto:lam2327@gsb.columbia.edu">Feel Free to Connect</a>
     </nav>
   </header>
 
-  <section class="grid" id="grid" aria-label="Selected work"></section>
+  <div class="section-head">
+    <h2>Selected work</h2>
+    <p>Select a sample to open it.</p>
+  </div>
 
-  <footer>Select any sample to see the details.</footer>
+  <section class="grid" id="grid" aria-label="Selected work"></section>
 </main>
 
 <dialog id="dlg" aria-labelledby="dlg-title">
@@ -74,12 +83,12 @@ footer{margin-top:64px;color:var(--muted);font-size:.9rem}
 <script>
 /* EDIT THIS LIST: one object per sample.
    type: "image", "pdf", or "video"
-   thumb: card image (optional; the blue block shows if missing)
+   thumb: card image (optional; the grid placeholder shows if missing)
    file: what opens when clicked (put files in the assets/ folder)
    download: optional extra file (add a comma after the line before it) */
 const items = [
   {
-    kind: "Investment Memos",
+    kind: "Investment memos",
     title: "Shareholder Pitches",
     result: "Sourcing and underwriting growth opportunities",
     type: "pdf",
@@ -87,20 +96,20 @@ const items = [
     file: "assets/investment-memo.pdf"
   },
   {
-    kind: "Financial Modeling",
+    kind: "Financial modeling",
     title: "Risk & Operations Dashboards",
-    result: "Mitigating risk while improving business operations",
+    result: "Mitigating risk, driving revenue growth, and reducing operational cost",
     type: "image",
     thumb: "assets/model-thumb.jpg",
     file: "assets/operating-model.png"
   },
   {
-    kind: "Case Study",
-    title: "Value Creation",
-    result: "Driving revenue growth and reducing costs",
+    kind: "AI Agents",
+    title: "Agentic Workflow In Action",
+    result: "Improving customer satisfaction and operational efficiency",
     type: "pdf",
-    thumb: "assets/case-study-thumb.jpg",
-    file: "assets/case-study.pdf"
+    thumb: "assets/ai-workflow-thumb.jpg",
+    file: "assets/ai-workflow.pdf"
   }
 ];
 
@@ -115,7 +124,8 @@ items.forEach((it, i) => {
   b.innerHTML =
     '<div class="thumb"><span>' + it.kind + '</span>' +
     (it.thumb ? '<img src="' + it.thumb + '" alt="" loading="lazy" onerror="this.remove()">' : '') +
-    '</div><div class="body"><h2>' + it.title + '</h2><p>' + it.result + '</p></div>';
+    '</div><div class="body"><h2>' + it.title + '</h2><p>' + it.result + '</p>' +
+    '<span class="open">View sample</span></div>';
   b.addEventListener("click", () => openItem(i));
   grid.appendChild(b);
 });
@@ -142,8 +152,5 @@ function openItem(i) {
 dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
 dlg.addEventListener("close", () => { content.innerHTML = ""; });
 </script>
-</body>
-</html>
-
 </body>
 </html>
