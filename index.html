@@ -112,15 +112,10 @@
 
         <!-- HERO SECTION -->
         <section class="max-w-4xl pt-6 sm:pt-10 space-y-8">
-            <!-- Header Title: Luis Marull & Credentials -->
-            <div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 flex-wrap">
-                <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl font-semibold tracking-tight text-navy-900 dark:text-white leading-[1.08]">
-                    Luis Marull
-                </h1>
-                <span class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-semibold bg-navy-900/10 dark:bg-sky-500/15 text-navy-900 dark:text-sky-300 border border-navy-900/20 dark:border-sky-500/30 w-fit">
-                    Columbia MBA Candidate | Ex-Head of Growth
-                </span>
-            </div>
+            <!-- Header Title: Luis Marull -->
+            <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl font-semibold tracking-tight text-navy-900 dark:text-white leading-[1.08]">
+                Luis Marull
+            </h1>
 
             <!-- Executive Bio -->
             <p class="text-slate-600 dark:text-slate-300 text-lg sm:text-xl md:text-2xl leading-relaxed font-normal max-w-3xl">
@@ -152,12 +147,12 @@
 
         <hr class="border-slate-200 dark:border-slate-800">
 
-        <!-- SELECTED SAMPLE SECTION -->
+        <!-- SELECTED WORK SECTION -->
         <section class="space-y-8">
             <!-- Section Header -->
             <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
                 <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-navy-900 dark:text-white tracking-tight">
-                    Selected Sample
+                    Selected work
                 </h2>
                 <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium tracking-wide">
                     Select a sample to open it.
@@ -177,14 +172,14 @@
                                 Investment memos
                             </div>
                             <span class="absolute bottom-3 right-3 text-[10px] uppercase font-mono tracking-wider px-2 py-0.5 rounded bg-white/80 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400">
-                                Underwriting
+                                PE Underwriting
                             </span>
                         </div>
 
                         <!-- Card Body -->
                         <div class="p-6 space-y-3">
                             <h3 class="font-serif text-xl sm:text-2xl font-bold text-navy-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
-                                Shareholder Pitch Competitions
+                                Shareholder Pitches
                             </h3>
                             <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
                                 Sourcing and underwriting growth opportunities
@@ -217,7 +212,7 @@
                         <!-- Card Body -->
                         <div class="p-6 space-y-3">
                             <h3 class="font-serif text-xl sm:text-2xl font-bold text-navy-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
-                                Risk & Operations Dashboards/Models
+                                Risk & Operations Dashboards
                             </h3>
                             <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
                                 Mitigating risk, driving revenue growth, and reducing operational cost
@@ -243,7 +238,7 @@
                                 AI Agents
                             </div>
                             <span class="absolute bottom-3 right-3 text-[10px] uppercase font-mono tracking-wider px-2 py-0.5 rounded bg-white/80 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400">
-                                Tech Business Development 
+                                Tech Integration
                             </span>
                         </div>
 
@@ -377,65 +372,26 @@
                 </button>
             </div>
 
-            <!-- Contact Form -->
-            <form id="contactForm" onsubmit="handleContactSubmit(event)" class="space-y-4">
+            <form onsubmit="handleContactSubmit(event)" class="space-y-4">
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Your Name</label>
-                    <input id="contactName" type="text" required placeholder="e.g. Sarah Jenkins" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500">
+                    <input type="text" required placeholder="e.g. Sarah Jenkins" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500">
                 </div>
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Work Email</label>
-                    <input id="contactEmail" type="email" required placeholder="sarah@firm.com" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500">
+                    <input type="email" required placeholder="sarah@firm.com" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500">
                 </div>
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Opportunity / Topic</label>
-                    <textarea id="contactMessage" rows="3" required placeholder="Brief message regarding private equity or operations advisory..." class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"></textarea>
+                    <textarea rows="3" required placeholder="Brief message regarding private equity or operations advisory..." class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"></textarea>
                 </div>
-                <button id="submitBtn" type="submit" class="w-full py-3 rounded-full bg-navy-900 hover:bg-navy-800 dark:bg-sky-500 dark:hover:bg-sky-400 text-white dark:text-slate-950 text-sm font-semibold transition-colors flex items-center justify-center gap-2">
-                    <span id="submitBtnText">Send Direct Message</span>
-                    <i id="submitBtnIcon" class="fa-solid fa-paper-plane text-xs"></i>
+                <button type="submit" class="w-full py-3 rounded-full bg-navy-900 hover:bg-navy-800 dark:bg-sky-500 dark:hover:bg-sky-400 text-white dark:text-slate-950 text-sm font-semibold transition-colors">
+                    Send Direct Message
                 </button>
             </form>
 
-            <!-- Success Transmission Confirmation Screen -->
-            <div id="contactSuccess" class="hidden space-y-5">
-                <div class="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 space-y-3">
-                    <div class="flex items-center gap-2 text-emerald-800 dark:text-emerald-300 font-semibold text-sm">
-                        <i class="fa-solid fa-circle-check text-base text-emerald-600 dark:text-emerald-400"></i>
-                        <span>Message Transmitted Successfully</span>
-                    </div>
-                    <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                        Thank you, <strong id="sentName" class="text-slate-900 dark:text-white"></strong>. Your message regarding strategic partnership/opportunities has been processed and logged.
-                    </p>
-                    <div class="p-3 bg-white dark:bg-slate-900 rounded-lg border border-emerald-100 dark:border-emerald-900 text-xs space-y-1">
-                        <div class="flex justify-between text-slate-500">
-                            <span>Sender Email:</span>
-                            <span id="sentEmail" class="font-medium text-slate-800 dark:text-slate-200"></span>
-                        </div>
-                        <div class="flex justify-between text-slate-500">
-                            <span>Dispatch Status:</span>
-                            <span class="font-mono text-[10px] uppercase text-emerald-600 font-bold">Transmitted to Luis</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex items-center gap-3">
-                    <button onclick="resetContactForm()" class="w-full py-2.5 rounded-full border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 text-xs font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
-                        Send Another Message
-                    </button>
-                    <button onclick="closeModal('connectModal')" class="w-full py-2.5 rounded-full bg-navy-900 dark:bg-sky-500 text-white dark:text-slate-950 text-xs font-semibold transition-colors">
-                        Done
-                    </button>
-                </div>
-            </div>
-
-            <!-- Direct Email Fallback -->
-            <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs text-slate-500">
-                <span>Prefer direct email?</span>
-                <button onclick="copyDirectEmail()" class="text-navy-900 dark:text-sky-400 font-semibold hover:underline inline-flex items-center gap-1.5">
-                    <i class="fa-regular fa-copy"></i>
-                    <span id="copyEmailText">Copy direct email</span>
-                </button>
+            <div id="contactSuccess" class="hidden p-3 rounded-lg bg-emerald-50 text-emerald-800 text-xs font-medium text-center">
+                Message received. Luis will respond promptly.
             </div>
         </div>
     </div>
@@ -506,7 +462,7 @@
         const samplesData = {
             1: {
                 category: "PE Underwriting & Strategy",
-                title: "Shareholder Pitch Competitions",
+                title: "Shareholder Pitches",
                 description: "Comprehensive confidential investment memo and pitch deck framework utilized to secure institutional capital for healthcare facility acquisitions.",
                 previewHtml: `
                     <div class="space-y-4 font-sans">
@@ -540,7 +496,7 @@
             },
             2: {
                 category: "Operations & Risk Analytics",
-                title: "Risk & Operations Dashboards/Models",
+                title: "Risk & Operations Dashboards",
                 description: "Custom financial modeling tool and operational dashboard built for monitoring facility utilization, EBITDA variance, and patient intake efficiency.",
                 previewHtml: `
                     <div class="space-y-4 font-sans">
@@ -630,54 +586,12 @@
 
         function handleContactSubmit(e) {
             e.preventDefault();
-            const name = document.getElementById('contactName').value;
-            const email = document.getElementById('contactEmail').value;
-            const submitBtnText = document.getElementById('submitBtnText');
-            const submitBtnIcon = document.getElementById('submitBtnIcon');
-
-            // Show sending spinner state
-            submitBtnText.textContent = "Transmitting message...";
-            submitBtnIcon.className = "fa-solid fa-spinner fa-spin text-xs";
-
+            const alertBox = document.getElementById('contactSuccess');
+            alertBox.classList.remove('hidden');
             setTimeout(() => {
-                // Invert view to success card
-                document.getElementById('contactForm').classList.add('hidden');
-                document.getElementById('sentName').textContent = name;
-                document.getElementById('sentEmail').textContent = email;
-                document.getElementById('contactSuccess').classList.remove('hidden');
-
-                // Reset button state for next time
-                submitBtnText.textContent = "Send Direct Message";
-                submitBtnIcon.className = "fa-solid fa-paper-plane text-xs";
-            }, 800);
-        }
-
-        function resetContactForm() {
-            document.getElementById('contactForm').reset();
-            document.getElementById('contactSuccess').classList.add('hidden');
-            document.getElementById('contactForm').classList.remove('hidden');
-        }
-
-        function copyDirectEmail() {
-            const directEmail = "luis.marull@columbia.edu";
-            const btnText = document.getElementById('copyEmailText');
-            
-            // Clipboard fallback mechanism
-            const textArea = document.createElement("textarea");
-            textArea.value = directEmail;
-            document.body.appendChild(textArea);
-            textArea.select();
-            try {
-                document.execCommand('copy');
-                btnText.textContent = "Copied to clipboard!";
-            } catch (err) {
-                btnText.textContent = directEmail;
-            }
-            document.body.removeChild(textArea);
-
-            setTimeout(() => {
-                btnText.textContent = "Copy direct email";
-            }, 3000);
+                alertBox.classList.add('hidden');
+                closeModal('connectModal');
+            }, 2000);
         }
 
         function toggleTheme() {
