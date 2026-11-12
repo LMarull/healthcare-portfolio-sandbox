@@ -4,28 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luis Marull — Healthcare Operations & Real Estate</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
-                        navy: {
-                            50: '#f0f4f8',
-                            100: '#d9e2ec',
-                            700: '#1b2a4a',
-                            800: '#0f172a',
-                            900: '#0b132b',
-                        },
+                        navy: { 50: '#f0f4f8', 100: '#d9e2ec', 700: '#1b2a4a', 800: '#0f172a', 900: '#0b132b' },
                         cream: '#FBFBF9',
                         slateBorder: '#E2E8F0',
                     },
@@ -38,50 +28,19 @@
         }
     </script>
     <style>
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #F8F9FA;
-            color: #1E293B;
-        }
-
-        /* Subtle grid background for card visual containers */
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F8F9FA; color: #1E293B; }
         .card-grid-bg {
             background-color: #EBF3FA;
-            background-image: 
-                linear-gradient(to right, rgba(197, 219, 240, 0.4) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(197, 219, 240, 0.4) 1px, transparent 1px);
+            background-image: linear-gradient(to right, rgba(197,219,240,.4) 1px, transparent 1px), linear-gradient(to bottom, rgba(197,219,240,.4) 1px, transparent 1px);
             background-size: 20px 20px;
         }
-
         .dark .card-grid-bg {
             background-color: #111E38;
-            background-image: 
-                linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-image: linear-gradient(to right, rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,.05) 1px, transparent 1px);
         }
-
-        /* Glassmorphism modal backdrop */
-        .glass-backdrop {
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-        }
-
-        /* Smooth card hover lift */
-        .work-card {
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .work-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 30px -10px rgba(15, 23, 42, 0.08);
-        }
-
-        /* Line clamping helper */
-        .line-clamp-2 {
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
+        .glass-backdrop { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+        .work-card { transition: all .3s cubic-bezier(.16,1,.3,1); }
+        .work-card:hover { transform: translateY(-6px); box-shadow: 0 20px 30px -10px rgba(15,23,42,.08); }
     </style>
 </head>
 <body class="min-h-screen antialiased selection:bg-slate-800 selection:text-white dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
@@ -93,13 +52,11 @@
                 <span class="inline-block w-2 h-2 rounded-full bg-navy-800 dark:bg-sky-400"></span>
                 LM
             </a>
-
             <div class="flex items-center gap-4">
-                <button id="themeToggleBtn" onclick="toggleTheme()" class="p-2 text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white rounded-lg transition-colors" title="Toggle theme">
+                <button onclick="toggleTheme()" class="p-2 text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white rounded-lg transition-colors" title="Toggle theme">
                     <i class="fa-solid fa-moon dark:hidden text-lg"></i>
                     <i class="fa-solid fa-sun hidden dark:block text-lg"></i>
                 </button>
-
                 <button onclick="openModal('connectModal')" class="hidden sm:inline-flex text-xs font-semibold uppercase tracking-wider px-4 py-2 rounded-full border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
                     Direct Contact
                 </button>
@@ -107,259 +64,94 @@
         </div>
     </header>
 
-    <!-- Main Content Container -->
     <main class="max-w-6xl mx-auto px-6 sm:px-8 pt-16 sm:pt-20 pb-24 space-y-16 sm:space-y-20">
 
-        <!-- HERO SECTION -->
+        <!-- HERO -->
         <section class="max-w-4xl pt-6 sm:pt-10 space-y-8">
-            <!-- Header Title: Luis Marull & Credentials -->
             <div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 flex-wrap">
-                <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl font-semibold tracking-tight text-navy-900 dark:text-white leading-[1.08]">
-                    Luis Marull
-                </h1>
+                <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl font-semibold tracking-tight text-navy-900 dark:text-white leading-[1.08]">Luis Marull</h1>
                 <span class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-semibold bg-navy-900/10 dark:bg-sky-500/15 text-navy-900 dark:text-sky-300 border border-navy-900/20 dark:border-sky-500/30 w-fit">
                     Columbia MBA Candidate | Ex-Head of Growth
                 </span>
             </div>
-
-            <!-- Executive Bio -->
             <p class="text-slate-600 dark:text-slate-300 text-lg sm:text-xl md:text-2xl leading-relaxed font-normal max-w-3xl">
                 Healthcare professional who structures strategic partnerships, creates shareholder value, and sustains long-term growth. I am targeting healthcare operations and real estate opportunities.
             </p>
-
-            <!-- Action Bar -->
             <div class="pt-2 flex flex-wrap items-center gap-4 sm:gap-6">
-                <!-- Primary Action Button -->
                 <button onclick="openModal('connectModal')" class="inline-flex items-center justify-center px-6 py-3.5 rounded-full bg-navy-900 hover:bg-navy-800 dark:bg-sky-500 dark:hover:bg-sky-400 text-white dark:text-slate-950 font-medium text-sm transition-all shadow-sm hover:shadow-md active:scale-95 group">
                     <span>Feel free to connect</span>
                     <i class="fa-solid fa-arrow-right ml-2.5 text-xs transition-transform group-hover:translate-x-1"></i>
                 </button>
-
-                <!-- Auxiliary Text Links -->
-                <div class="flex items-center gap-6 pl-2">
-                    <a href="https://linkedin.com" target="_blank" rel="noopener" class="text-sm font-semibold text-navy-900 dark:text-slate-200 underline decoration-slate-300 dark:decoration-slate-600 underline-offset-4 hover:decoration-navy-900 dark:hover:decoration-sky-400 hover:text-navy-900 dark:hover:text-white transition-all inline-flex items-center gap-1.5">
-                        <i class="fa-brands fa-linkedin text-base text-slate-500"></i>
-                        <span>LinkedIn</span>
-                    </a>
-
-                    <a href="#resume" onclick="openModal('resumeModal')" class="text-sm font-semibold text-navy-900 dark:text-slate-200 underline decoration-slate-300 dark:decoration-slate-600 underline-offset-4 hover:decoration-navy-900 dark:hover:decoration-sky-400 hover:text-navy-900 dark:hover:text-white transition-all inline-flex items-center gap-1.5">
-                        <i class="fa-regular fa-file-pdf text-base text-slate-500"></i>
-                        <span>Resume</span>
-                    </a>
-                </div>
+                <a href="https://www.linkedin.com/in/luismarull" target="_blank" rel="noopener" class="text-sm font-semibold text-navy-900 dark:text-slate-200 underline decoration-slate-300 dark:decoration-slate-600 underline-offset-4 hover:decoration-navy-900 dark:hover:decoration-sky-400 transition-all inline-flex items-center gap-1.5 pl-2">
+                    <i class="fa-brands fa-linkedin text-base text-slate-500"></i>
+                    <span>LinkedIn</span>
+                </a>
             </div>
         </section>
 
         <hr class="border-slate-200 dark:border-slate-800">
 
-        <!-- SAMPLES SECTION -->
+        <!-- SAMPLES -->
         <section class="space-y-8">
-            <!-- Section Header -->
             <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
-                <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-navy-900 dark:text-white tracking-tight">
-                    Samples
-                </h2>
-                <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium tracking-wide">
-                    Select a sample to open it.
-                </p>
+                <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-navy-900 dark:text-white tracking-tight">Samples</h2>
+                <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium tracking-wide">Select a sample to open it.</p>
             </div>
-
-            <!-- 3-Column Card Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-                
-                <!-- CARD 1 -->
-                <article onclick="openSample(1)" class="work-card group cursor-pointer bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col justify-between">
-                    <div>
-                        <!-- Grid Visual Container -->
-                        <div class="card-grid-bg h-48 sm:h-52 w-full border-b border-slate-200/80 dark:border-slate-800 flex items-center justify-center p-6 relative">
-                            <!-- Visual Tag Accent -->
-                            <div class="font-serif italic text-xl sm:text-2xl text-navy-900/80 dark:text-slate-200 tracking-wide font-medium group-hover:scale-105 transition-transform duration-300">
-                                Investment memos
-                            </div>
-                            <span class="absolute bottom-3 right-3 text-[10px] uppercase font-mono tracking-wider px-2 py-0.5 rounded bg-white/80 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400">
-                                Underwriting
-                            </span>
-                        </div>
-
-                        <!-- Card Body -->
-                        <div class="p-6 space-y-3">
-                            <h3 class="font-serif text-xl sm:text-2xl font-bold text-navy-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
-                                Executive Pitch Competitions
-                            </h3>
-                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                                Sourcing and underwriting growth opportunities
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Card Footer Action -->
-                    <div class="px-6 pb-6 pt-2">
-                        <span class="inline-flex items-center text-xs font-semibold text-navy-900 dark:text-sky-400 group-hover:translate-x-1 transition-transform">
-                            View sample <span class="ml-1 text-sm">→</span>
-                        </span>
-                    </div>
-                </article>
-
-                <!-- CARD 2 -->
-                <article onclick="openSample(2)" class="work-card group cursor-pointer bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col justify-between">
-                    <div>
-                        <!-- Grid Visual Container -->
-                        <div class="card-grid-bg h-48 sm:h-52 w-full border-b border-slate-200/80 dark:border-slate-800 flex items-center justify-center p-6 relative">
-                            <!-- Visual Tag Accent -->
-                            <div class="font-serif italic text-xl sm:text-2xl text-navy-900/80 dark:text-slate-200 tracking-wide font-medium group-hover:scale-105 transition-transform duration-300">
-                                Financial modeling
-                            </div>
-                            <span class="absolute bottom-3 right-3 text-[10px] uppercase font-mono tracking-wider px-2 py-0.5 rounded bg-white/80 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400">
-                                Operations
-                            </span>
-                        </div>
-
-                        <!-- Card Body -->
-                        <div class="p-6 space-y-3">
-                            <h3 class="font-serif text-xl sm:text-2xl font-bold text-navy-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
-                                Risk & Operation Dashboards/Models
-                            </h3>
-                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                                Mitigating risk, driving revenue growth, and reducing operational cost
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Card Footer Action -->
-                    <div class="px-6 pb-6 pt-2">
-                        <span class="inline-flex items-center text-xs font-semibold text-navy-900 dark:text-sky-400 group-hover:translate-x-1 transition-transform">
-                            View sample <span class="ml-1 text-sm">→</span>
-                        </span>
-                    </div>
-                </article>
-
-                <!-- CARD 3 -->
-                <article onclick="openSample(3)" class="work-card group cursor-pointer bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col justify-between">
-                    <div>
-                        <!-- Grid Visual Container -->
-                        <div class="card-grid-bg h-48 sm:h-52 w-full border-b border-slate-200/80 dark:border-slate-800 flex items-center justify-center p-6 relative">
-                            <!-- Visual Tag Accent -->
-                            <div class="font-serif italic text-xl sm:text-2xl text-navy-900/80 dark:text-slate-200 tracking-wide font-medium group-hover:scale-105 transition-transform duration-300">
-                                AI Agents
-                            </div>
-                            <span class="absolute bottom-3 right-3 text-[10px] uppercase font-mono tracking-wider px-2 py-0.5 rounded bg-white/80 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400">
-                                Tech Business Development
-                            </span>
-                        </div>
-
-                        <!-- Card Body -->
-                        <div class="p-6 space-y-3">
-                            <h3 class="font-serif text-xl sm:text-2xl font-bold text-navy-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
-                                Agentic Workflow In Action
-                            </h3>
-                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                                Improving customer satisfaction and work efficiency
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Card Footer Action -->
-                    <div class="px-6 pb-6 pt-2">
-                        <span class="inline-flex items-center text-xs font-semibold text-navy-900 dark:text-sky-400 group-hover:translate-x-1 transition-transform">
-                            View sample <span class="ml-1 text-sm">→</span>
-                        </span>
-                    </div>
-                </article>
-
-            </div>
+            <div id="sampleGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8"></div>
         </section>
 
-        <!-- STRATEGIC FOCUS AREAS -->
+        <!-- CORE DOMAINS -->
         <section class="space-y-6 pt-4">
-            <h3 class="font-serif text-2xl font-semibold text-navy-900 dark:text-white">
-                Core Domains & Capabilities
-            </h3>
-
+            <h3 class="font-serif text-2xl font-semibold text-navy-900 dark:text-white">Core Domains & Capabilities</h3>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800">
-                    <div class="w-10 h-10 rounded-lg bg-navy-900/5 dark:bg-sky-500/10 flex items-center justify-center text-navy-900 dark:text-sky-400 mb-4">
-                        <i class="fa-solid fa-hospital-user"></i>
-                    </div>
+                    <div class="w-10 h-10 rounded-lg bg-navy-900/5 dark:bg-sky-500/10 flex items-center justify-center text-navy-900 dark:text-sky-400 mb-4"><i class="fa-solid fa-hospital-user"></i></div>
                     <h4 class="font-bold text-base text-navy-900 dark:text-white mb-2">Operations</h4>
-                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Streamlining clinical workflows, optimizing patient flow, and ensuring compliance across outpatient facilities and surgical centers.
-                    </p>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Streamlining clinical workflows, optimizing patient flow, and ensuring compliance across outpatient facilities and surgical centers.</p>
                 </div>
-
                 <div class="p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800">
-                    <div class="w-10 h-10 rounded-lg bg-navy-900/5 dark:bg-sky-500/10 flex items-center justify-center text-navy-900 dark:text-sky-400 mb-4">
-                        <i class="fa-solid fa-building-columns"></i>
-                    </div>
+                    <div class="w-10 h-10 rounded-lg bg-navy-900/5 dark:bg-sky-500/10 flex items-center justify-center text-navy-900 dark:text-sky-400 mb-4"><i class="fa-solid fa-building-columns"></i></div>
                     <h4 class="font-bold text-base text-navy-900 dark:text-white mb-2">Real Estate</h4>
-                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Underwriting medical office buildings (MOBs), structuring triple-net leases (NNN), and executing value-add asset management.
-                    </p>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Underwriting medical office buildings (MOBs), structuring triple-net leases (NNN), and executing value-add asset management.</p>
                 </div>
-
                 <div class="p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800">
-                    <div class="w-10 h-10 rounded-lg bg-navy-900/5 dark:bg-sky-500/10 flex items-center justify-center text-navy-900 dark:text-sky-400 mb-4">
-                        <i class="fa-solid fa-robot"></i>
-                    </div>
+                    <div class="w-10 h-10 rounded-lg bg-navy-900/5 dark:bg-sky-500/10 flex items-center justify-center text-navy-900 dark:text-sky-400 mb-4"><i class="fa-solid fa-robot"></i></div>
                     <h4 class="font-bold text-base text-navy-900 dark:text-white mb-2">AI-Powered Automation</h4>
-                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Deploying autonomous agentic workflows for automated patient intake, claims processing, and strategic underwriting synthesis.
-                    </p>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Deploying autonomous agentic workflows for automated patient intake, claims processing, and strategic underwriting synthesis.</p>
                 </div>
             </div>
         </section>
-
     </main>
 
     <!-- FOOTER -->
     <footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 py-12 transition-colors">
         <div class="max-w-6xl mx-auto px-6 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
-            <div>
-                © <span id="year">2026</span> Luis Marull. All rights reserved.
-            </div>
+            <div>© <span id="year">2026</span> Luis Marull. All rights reserved.</div>
             <div class="flex items-center gap-6 font-medium">
-                <a href="https://linkedin.com" target="_blank" class="hover:text-navy-900 dark:hover:text-white transition-colors">LinkedIn</a>
-                <button onclick="openModal('resumeModal')" class="hover:text-navy-900 dark:hover:text-white transition-colors">Resume</button>
+                <a href="https://www.linkedin.com/in/luismarull" target="_blank" rel="noopener" class="hover:text-navy-900 dark:hover:text-white transition-colors">LinkedIn</a>
                 <button onclick="openModal('connectModal')" class="hover:text-navy-900 dark:hover:text-white transition-colors">Contact</button>
             </div>
         </div>
     </footer>
 
-    <!-- SAMPLE PREVIEW DRAWER / MODAL -->
+    <!-- SAMPLE MODAL -->
     <div id="sampleModal" class="fixed inset-0 z-50 hidden glass-backdrop bg-slate-950/40 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
-        <div class="bg-white dark:bg-slate-900 w-full max-w-3xl rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden transform transition-all my-8">
-            <!-- Modal Header -->
+        <div class="bg-white dark:bg-slate-900 w-full max-w-3xl rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden my-8">
             <div class="p-6 border-b border-slate-200 dark:border-slate-800 flex items-start justify-between bg-slate-50 dark:bg-slate-950/50">
                 <div>
-                    <span id="sampleCategory" class="text-xs font-mono uppercase tracking-wider text-sky-600 dark:text-sky-400 font-semibold block mb-1">
-                        Category
-                    </span>
-                    <h3 id="sampleTitle" class="font-serif text-2xl sm:text-3xl font-bold text-navy-900 dark:text-white">
-                        Sample Title
-                    </h3>
+                    <span id="sampleCategory" class="text-xs font-mono uppercase tracking-wider text-sky-600 dark:text-sky-400 font-semibold block mb-1"></span>
+                    <h3 id="sampleTitle" class="font-serif text-2xl sm:text-3xl font-bold text-navy-900 dark:text-white"></h3>
                 </div>
-                <button onclick="closeModal('sampleModal')" class="text-slate-400 hover:text-slate-700 dark:hover:text-white p-2 rounded-lg transition-colors">
-                    <i class="fa-solid fa-xmark text-xl"></i>
-                </button>
+                <button onclick="closeModal('sampleModal')" aria-label="Close" class="text-slate-400 hover:text-slate-700 dark:hover:text-white p-2 rounded-lg transition-colors"><i class="fa-solid fa-xmark text-xl"></i></button>
             </div>
-
-            <!-- Modal Content Body -->
             <div class="p-6 sm:p-8 space-y-6 max-h-[70vh] overflow-y-auto">
-                <p id="sampleDescription" class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
-                    Description goes here.
-                </p>
-
-                <!-- Mock Visual Document Viewer -->
-                <div id="samplePreviewContainer" class="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 p-6 space-y-4">
-                    <!-- Dynamic Javascript Mock Document Injected Here -->
-                </div>
+                <p id="sampleDescription" class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed"></p>
+                <div id="samplePreview"></div>
             </div>
-
-            <!-- Modal Footer -->
             <div class="p-6 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/50 flex justify-between items-center">
-                <span class="text-xs text-slate-400">Confidential sample excerpt</span>
-                <button onclick="closeModal('sampleModal')" class="px-5 py-2 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-xs font-semibold hover:opacity-90 transition-opacity">
-                    Close Preview
-                </button>
+                <a id="sampleOpen" href="#" target="_blank" rel="noopener" class="hidden text-xs font-semibold text-navy-900 dark:text-sky-400 hover:underline">Open full size</a>
+                <span id="sampleSpacer"></span>
+                <button onclick="closeModal('sampleModal')" class="px-5 py-2 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-xs font-semibold hover:opacity-90 transition-opacity">Close</button>
             </div>
         </div>
     </div>
@@ -369,328 +161,213 @@
         <div class="bg-white dark:bg-slate-900 w-full max-w-lg rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8 space-y-6">
             <div class="flex items-start justify-between">
                 <div>
-                    <h3 class="font-serif text-2xl font-bold text-navy-900 dark:text-white">Let's Connect</h3>
-                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Direct contact for strategic advisory & opportunities</p>
+                    <h3 class="font-serif text-2xl font-bold text-navy-900 dark:text-white">Let’s Connect</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Send a message about an opportunity or conversation.</p>
                 </div>
-                <button onclick="closeModal('connectModal')" class="text-slate-400 hover:text-slate-700 dark:hover:text-white p-1">
-                    <i class="fa-solid fa-xmark text-lg"></i>
-                </button>
+                <button onclick="closeModal('connectModal')" aria-label="Close" class="text-slate-400 hover:text-slate-700 dark:hover:text-white p-1"><i class="fa-solid fa-xmark text-lg"></i></button>
             </div>
 
-            <!-- Contact Form -->
             <form id="contactForm" onsubmit="handleContactSubmit(event)" class="space-y-4">
                 <div>
-                    <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Your Name</label>
-                    <input id="contactName" type="text" required placeholder="e.g. Sarah Jenkins" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500">
+                    <label for="contactName" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Your name</label>
+                    <input id="contactName" type="text" required class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500">
                 </div>
                 <div>
-                    <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Work Email</label>
-                    <input id="contactEmail" type="email" required placeholder="sarah@firm.com" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500">
+                    <label for="contactEmail" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Email</label>
+                    <input id="contactEmail" type="email" required class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500">
                 </div>
                 <div>
-                    <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Opportunity / Topic</label>
-                    <textarea id="contactMessage" rows="3" required placeholder="Brief message regarding private equity or operations advisory..." class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"></textarea>
+                    <label for="contactMessage" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Message</label>
+                    <textarea id="contactMessage" rows="4" required class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"></textarea>
                 </div>
-                <button id="submitBtn" type="submit" class="w-full py-3 rounded-full bg-navy-900 hover:bg-navy-800 dark:bg-sky-500 dark:hover:bg-sky-400 text-white dark:text-slate-950 text-sm font-semibold transition-colors flex items-center justify-center gap-2">
-                    <span id="submitBtnText">Send Direct Message</span>
+                <!-- Spam trap: people never see or fill this -->
+                <input id="contactGotcha" type="text" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+                <p id="formError" class="hidden text-xs text-red-600 dark:text-red-400"></p>
+                <button id="submitBtn" type="submit" class="w-full py-3 rounded-full bg-navy-900 hover:bg-navy-800 dark:bg-sky-500 dark:hover:bg-sky-400 text-white dark:text-slate-950 text-sm font-semibold transition-colors flex items-center justify-center gap-2 disabled:opacity-60">
+                    <span id="submitBtnText">Send message</span>
                     <i id="submitBtnIcon" class="fa-solid fa-paper-plane text-xs"></i>
                 </button>
             </form>
 
-            <!-- Success Transmission Confirmation Screen -->
             <div id="contactSuccess" class="hidden space-y-5">
-                <div class="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 space-y-3">
+                <div class="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 space-y-2">
                     <div class="flex items-center gap-2 text-emerald-800 dark:text-emerald-300 font-semibold text-sm">
-                        <i class="fa-solid fa-circle-check text-base text-emerald-600 dark:text-emerald-400"></i>
-                        <span>Message Transmitted Successfully</span>
+                        <i class="fa-solid fa-circle-check text-base"></i>
+                        <span id="successTitle"></span>
                     </div>
-                    <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                        Thank you, <strong id="sentName" class="text-slate-900 dark:text-white"></strong>. Your message regarding strategic partnership/opportunities has been processed and logged.
-                    </p>
-                    <div class="p-3 bg-white dark:bg-slate-900 rounded-lg border border-emerald-100 dark:border-emerald-900 text-xs space-y-1">
-                        <div class="flex justify-between text-slate-500">
-                            <span>Sender Email:</span>
-                            <span id="sentEmail" class="font-medium text-slate-800 dark:text-slate-200"></span>
-                        </div>
-                        <div class="flex justify-between text-slate-500">
-                            <span>Dispatch Status:</span>
-                            <span class="font-mono text-[10px] uppercase text-emerald-600 font-bold">Transmitted to Luis</span>
-                        </div>
-                    </div>
+                    <p id="successText" class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed"></p>
                 </div>
-
                 <div class="flex items-center gap-3">
-                    <button onclick="resetContactForm()" class="w-full py-2.5 rounded-full border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 text-xs font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
-                        Send Another Message
-                    </button>
-                    <button onclick="closeModal('connectModal')" class="w-full py-2.5 rounded-full bg-navy-900 dark:bg-sky-500 text-white dark:text-slate-950 text-xs font-semibold transition-colors">
-                        Done
-                    </button>
+                    <button onclick="resetContactForm()" class="w-full py-2.5 rounded-full border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 text-xs font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Send another</button>
+                    <button onclick="closeModal('connectModal')" class="w-full py-2.5 rounded-full bg-navy-900 dark:bg-sky-500 text-white dark:text-slate-950 text-xs font-semibold transition-colors">Done</button>
                 </div>
             </div>
 
-            <!-- Direct Email Fallback -->
             <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs text-slate-500">
                 <span>Prefer direct email?</span>
                 <button onclick="copyDirectEmail()" class="text-navy-900 dark:text-sky-400 font-semibold hover:underline inline-flex items-center gap-1.5">
                     <i class="fa-regular fa-copy"></i>
-                    <span id="copyEmailText">Copy direct email</span>
+                    <span id="copyEmailText">Copy email address</span>
                 </button>
             </div>
         </div>
     </div>
 
-    <!-- RESUME MODAL -->
-    <div id="resumeModal" class="fixed inset-0 z-50 hidden glass-backdrop bg-slate-950/40 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
-        <div class="bg-white dark:bg-slate-900 w-full max-w-2xl rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8 space-y-6 max-h-[85vh] overflow-y-auto">
-            <div class="flex items-start justify-between border-b border-slate-200 dark:border-slate-800 pb-4">
-                <div>
-                    <h3 class="font-serif text-3xl font-bold text-navy-900 dark:text-white">Luis Marull</h3>
-                    <p class="text-xs text-sky-600 dark:text-sky-400 font-semibold tracking-wide uppercase mt-1">Healthcare Operations & PE Strategy Executive</p>
-                </div>
-                <button onclick="closeModal('resumeModal')" class="text-slate-400 hover:text-slate-700 dark:hover:text-white p-1">
-                    <i class="fa-solid fa-xmark text-xl"></i>
-                </button>
-            </div>
-
-            <!-- Resume Content Snippets -->
-            <div class="space-y-6 text-sm text-slate-600 dark:text-slate-300">
-                <section class="space-y-2">
-                    <h4 class="font-bold text-xs uppercase tracking-wider text-slate-900 dark:text-white">Executive Summary</h4>
-                    <p class="leading-relaxed text-xs">
-                        Accomplished Healthcare Leader and Private Equity Operator with proven expertise in structuring multi-million dollar real estate transactions, optimizing operational EBITDA, and embedding agentic automation into healthcare workflows.
-                    </p>
-                </section>
-
-                <section class="space-y-3">
-                    <h4 class="font-bold text-xs uppercase tracking-wider text-slate-900 dark:text-white">Core Experience</h4>
-                    
-                    <div class="space-y-1">
-                        <div class="flex justify-between font-bold text-navy-900 dark:text-white text-xs">
-                            <span>Strategic Operations & Underwriting Director</span>
-                            <span>2022 — Present</span>
-                        </div>
-                        <p class="text-xs text-slate-500">Healthcare Private Equity & Asset Management</p>
-                        <ul class="list-disc pl-4 text-xs space-y-1">
-                            <li>Structured underwriting models for $120M+ in medical office building acquisitions.</li>
-                            <li>Engineered operational restructuring resulting in 35% margin expansion across 14 clinical assets.</li>
-                        </ul>
-                    </div>
-
-                    <div class="space-y-1 pt-2">
-                        <div class="flex justify-between font-bold text-navy-900 dark:text-white text-xs">
-                            <span>Senior Healthcare Operations Manager</span>
-                            <span>2018 — 2022</span>
-                        </div>
-                        <p class="text-xs text-slate-500">Regional Surgical Center Network</p>
-                        <ul class="list-disc pl-4 text-xs space-y-1">
-                            <li>Managed operations for multi-site outpatient centers, improving patient turnaround time by 28%.</li>
-                        </ul>
-                    </div>
-                </section>
-            </div>
-
-            <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex justify-end gap-3">
-                <button onclick="closeModal('resumeModal')" class="px-5 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">Close</button>
-                <button onclick="alert('Downloading resume copy...')" class="px-5 py-2 rounded-full bg-navy-900 dark:bg-sky-500 text-white dark:text-slate-950 text-xs font-semibold">Download PDF</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- JAVASCRIPT INTERACTION LOGIC -->
     <script>
-        // Set dynamic year in footer
-        document.getElementById('year').textContent = new Date().getFullYear();
+        /* ============ SETTINGS: EDIT THESE TWO LINES ============
+           CONTACT_EMAIL: where messages go.
+           FORM_ENDPOINT: paste your Formspree form URL here, e.g.
+             "https://formspree.io/f/abcdwxyz"
+           While it is empty, the form opens your email app with the message ready to send. */
+        const CONTACT_EMAIL = "lam2327@gsb.columbia.edu";
+        const FORM_ENDPOINT = "";
 
-        // Sample Data for Modals
-        const samplesData = {
-            1: {
-                category: "Sourcing & Underwriting",
+        /* ============ SAMPLES: EDIT THIS LIST ============
+           To add your work: upload the file to the assets/ folder on GitHub, then set
+             file: "assets/your-file.pdf"   and   type: "pdf"   (or "image" for png/jpg)
+           While file is "", the sample shows "To be continued". */
+        const samples = [
+            {
+                tag: "Underwriting", kind: "Investment memos",
                 title: "Executive Pitch Competitions",
-                description: "Comprehensive confidential investment memo and pitch deck framework utilized to secure institutional capital for healthcare facility acquisitions.",
-                previewHtml: `
-                    <div class="space-y-4 font-sans">
-                        <div class="flex justify-between items-center text-xs font-mono text-slate-400 border-b border-slate-200 dark:border-slate-800 pb-2">
-                            <span>PROJECT: ASC-HEALTHCARE-NAV-2026</span>
-                            <span>CONFIDENTIAL</span>
-                        </div>
-                        <div class="p-4 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2">
-                            <span class="text-xs uppercase font-bold text-sky-600">Executive Summary Snippet</span>
-                            <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Acquisition & Leaseback of 6 Outpatient Surgical Facilities</h4>
-                            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                                Underwrote $45M NNN real estate transaction with initial capitalization rate of 7.4%. Forecasted IRR of 18.2% over a 7-year holding period via tenant operational optimization.
-                            </p>
-                        </div>
-                        <div class="grid grid-cols-3 gap-2 text-center">
-                            <div class="p-3 bg-slate-100 dark:bg-slate-900 rounded">
-                                <span class="block text-xs font-bold text-slate-900 dark:text-white">$45.0M</span>
-                                <span class="text-[10px] text-slate-500">Purchase Price</span>
-                            </div>
-                            <div class="p-3 bg-slate-100 dark:bg-slate-900 rounded">
-                                <span class="block text-xs font-bold text-emerald-600">18.2%</span>
-                                <span class="text-[10px] text-slate-500">Projected IRR</span>
-                            </div>
-                            <div class="p-3 bg-slate-100 dark:bg-slate-900 rounded">
-                                <span class="block text-xs font-bold text-slate-900 dark:text-white">2.3x</span>
-                                <span class="text-[10px] text-slate-500">Target MOIC</span>
-                            </div>
-                        </div>
-                    </div>
-                `
+                summary: "Sourcing and underwriting growth opportunities",
+                category: "Sourcing & Underwriting",
+                type: "pdf", file: ""
             },
-            2: {
+            {
+                tag: "Operations", kind: "Financial modeling",
+                title: "Risk & Operation Dashboards/Models",
+                summary: "Mitigating risk, driving revenue growth, and reducing operational cost",
                 category: "Operations & Risk Analytics",
-                title: "Risk & Operations Dashboards/Models",
-                description: "Custom financial modeling tool and operational dashboard built for monitoring facility utilization, EBITDA variance, and patient intake efficiency.",
-                previewHtml: `
-                    <div class="space-y-4 font-sans">
-                        <div class="flex justify-between items-center text-xs font-mono text-slate-400 border-b border-slate-200 dark:border-slate-800 pb-2">
-                            <span>LIVE METRICS MONITORING</span>
-                            <span>Q3 PERFORMANCE</span>
-                        </div>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="p-4 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
-                                <span class="text-[11px] font-semibold text-slate-500">Operating Margin</span>
-                                <div class="text-2xl font-bold text-emerald-600 mt-1">34.8% <span class="text-xs font-normal text-slate-400">(+4.2%)</span></div>
-                                <div class="w-full bg-slate-200 dark:bg-slate-800 h-1.5 rounded-full mt-3 overflow-hidden">
-                                    <div class="bg-emerald-500 h-full w-[84%]"></div>
-                                </div>
-                            </div>
-                            <div class="p-4 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
-                                <span class="text-[11px] font-semibold text-slate-500">OR Capacity Utilization</span>
-                                <div class="text-2xl font-bold text-navy-900 dark:text-white mt-1">88.5% <span class="text-xs font-normal text-slate-400">(Optimal)</span></div>
-                                <div class="w-full bg-slate-200 dark:bg-slate-800 h-1.5 rounded-full mt-3 overflow-hidden">
-                                    <div class="bg-sky-500 h-full w-[88%]"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-xs text-slate-500 italic">
-                            Features real-time revenue cycle management risk scoring and direct automated escalation alerts for CFOs.
-                        </p>
-                    </div>
-                `
+                type: "image", file: ""
             },
-            3: {
-                category: "Tech Business Development",
+            {
+                tag: "Tech Business Development", kind: "AI Agents",
                 title: "Agentic Workflow In Action",
-                description: "Implementation blueprint and interactive architecture for deploying LLM-based autonomous agents into real-setting use.",
-                previewHtml: `
-                    <div class="space-y-4 font-sans">
-                        <div class="p-4 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-3">
-                            <span class="text-xs font-bold text-purple-600 dark:text-purple-400 uppercase tracking-wide">Autonomous Agent Pipeline</span>
-                            
-                            <div class="space-y-2 text-xs">
-                                <div class="p-2 rounded bg-slate-100 dark:bg-slate-800 flex items-center justify-between">
-                                    <span>1. Patient Intake Processing Agent</span>
-                                    <span class="text-emerald-600 font-bold">Completed (0.4s)</span>
-                                </div>
-                                <div class="p-2 rounded bg-slate-100 dark:bg-slate-800 flex items-center justify-between">
-                                    <span>2. Insurance Pre-Authorization Verification</span>
-                                    <span class="text-emerald-600 font-bold">Auto-Approved</span>
-                                </div>
-                                <div class="p-2 rounded bg-slate-100 dark:bg-slate-800 flex items-center justify-between">
-                                    <span>3. Electronic Health Record Sync</span>
-                                    <span class="text-sky-600 font-bold">Active</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-3 bg-purple-50 dark:bg-purple-950/40 rounded border border-purple-200 dark:border-purple-800 text-xs text-purple-900 dark:text-purple-200">
-                            <strong>Impact:</strong> Reduced administrative delay by 62% and eliminated manual intake errors across 3 regional clinics.
-                        </div>
-                    </div>
-                `
+                summary: "Improving customer satisfaction and work efficiency",
+                category: "Tech Business Development",
+                type: "pdf", file: ""
             }
-        };
+        ];
 
-        function openSample(id) {
-            const data = samplesData[id];
-            if (!data) return;
-            document.getElementById('sampleCategory').textContent = data.category;
-            document.getElementById('sampleTitle').textContent = data.title;
-            document.getElementById('sampleDescription').textContent = data.description;
-            document.getElementById('samplePreviewContainer').innerHTML = data.previewHtml;
+        const $ = id => document.getElementById(id);
+        $('year').textContent = new Date().getFullYear();
+
+        $('sampleGrid').innerHTML = samples.map((s, i) => `
+            <article role="button" tabindex="0" onclick="openSample(${i})" onkeydown="if(event.key==='Enter')openSample(${i})" class="work-card group cursor-pointer bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col justify-between">
+                <div>
+                    <div class="card-grid-bg h-48 sm:h-52 w-full border-b border-slate-200/80 dark:border-slate-800 flex items-center justify-center p-6 relative">
+                        <div class="font-serif italic text-xl sm:text-2xl text-navy-900/80 dark:text-slate-200 tracking-wide font-medium group-hover:scale-105 transition-transform duration-300">${s.kind}</div>
+                        <span class="absolute bottom-3 right-3 text-[10px] uppercase font-mono tracking-wider px-2 py-0.5 rounded bg-white/80 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400">${s.tag}</span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="font-serif text-xl sm:text-2xl font-bold text-navy-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">${s.title}</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">${s.summary}</p>
+                    </div>
+                </div>
+                <div class="px-6 pb-6 pt-2">
+                    <span class="inline-flex items-center text-xs font-semibold text-navy-900 dark:text-sky-400 group-hover:translate-x-1 transition-transform">View sample <span class="ml-1 text-sm">→</span></span>
+                </div>
+            </article>`).join('');
+
+        function openSample(i) {
+            const s = samples[i];
+            $('sampleCategory').textContent = s.category;
+            $('sampleTitle').textContent = s.title;
+            $('sampleDescription').textContent = s.summary;
+            const open = $('sampleOpen');
+            if (!s.file) {
+                $('samplePreview').innerHTML = `
+                    <div class="rounded-xl border border-dashed border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 py-16 text-center">
+                        <i class="fa-regular fa-file-lines text-3xl text-slate-400 mb-3"></i>
+                        <p class="font-serif text-3xl font-semibold text-navy-900 dark:text-white">To be continued</p>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">This sample is being prepared.</p>
+                    </div>`;
+                open.classList.add('hidden');
+            } else {
+                $('samplePreview').innerHTML = s.type === 'image'
+                    ? `<img src="${s.file}" alt="${s.title}" class="w-full rounded-xl border border-slate-200 dark:border-slate-800">`
+                    : `<iframe src="${s.file}" title="${s.title}" class="w-full h-[60vh] rounded-xl border border-slate-200 dark:border-slate-800"></iframe>`;
+                open.href = s.file;
+                open.classList.remove('hidden');
+            }
             openModal('sampleModal');
         }
 
-        function openModal(id) {
-            const modal = document.getElementById(id);
-            if (modal) {
-                modal.classList.remove('hidden');
-                document.body.style.overflow = 'hidden';
-            }
+        function openModal(id) { $(id).classList.remove('hidden'); document.body.style.overflow = 'hidden'; }
+        function closeModal(id) { $(id).classList.add('hidden'); document.body.style.overflow = 'auto'; if (id === 'sampleModal') $('samplePreview').innerHTML = ''; }
+
+        function showSuccess(title, text) {
+            $('successTitle').textContent = title;
+            $('successText').textContent = text;
+            $('contactForm').classList.add('hidden');
+            $('contactSuccess').classList.remove('hidden');
         }
 
-        function closeModal(id) {
-            const modal = document.getElementById(id);
-            if (modal) {
-                modal.classList.add('hidden');
-                document.body.style.overflow = 'auto';
-            }
+        function setSending(on) {
+            $('submitBtn').disabled = on;
+            $('submitBtnText').textContent = on ? 'Sending...' : 'Send message';
+            $('submitBtnIcon').className = on ? 'fa-solid fa-spinner fa-spin text-xs' : 'fa-solid fa-paper-plane text-xs';
         }
 
-        function handleContactSubmit(e) {
+        async function handleContactSubmit(e) {
             e.preventDefault();
-            const name = document.getElementById('contactName').value;
-            const email = document.getElementById('contactEmail').value;
-            const submitBtnText = document.getElementById('submitBtnText');
-            const submitBtnIcon = document.getElementById('submitBtnIcon');
+            const name = $('contactName').value.trim();
+            const email = $('contactEmail').value.trim();
+            const message = $('contactMessage').value.trim();
+            const err = $('formError');
+            err.classList.add('hidden');
 
-            // Show sending spinner state
-            submitBtnText.textContent = "Transmitting message...";
-            submitBtnIcon.className = "fa-solid fa-spinner fa-spin text-xs";
+            // No form service set up yet: open the visitor's email app with the message ready to send
+            if (!FORM_ENDPOINT) {
+                const subject = encodeURIComponent('Portfolio inquiry from ' + name);
+                const body = encodeURIComponent(message + '\n\n' + name + '\n' + email);
+                window.location.href = 'mailto:' + CONTACT_EMAIL + '?subject=' + subject + '&body=' + body;
+                showSuccess('Your email app should open', 'Your message is ready. Press send in your email app to finish.');
+                return;
+            }
 
-            setTimeout(() => {
-                // Invert view to success card
-                document.getElementById('contactForm').classList.add('hidden');
-                document.getElementById('sentName').textContent = name;
-                document.getElementById('sentEmail').textContent = email;
-                document.getElementById('contactSuccess').classList.remove('hidden');
-
-                // Reset button state for next time
-                submitBtnText.textContent = "Send Direct Message";
-                submitBtnIcon.className = "fa-solid fa-paper-plane text-xs";
-            }, 800);
+            setSending(true);
+            try {
+                const res = await fetch(FORM_ENDPOINT, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify({ name, email, message, _gotcha: $('contactGotcha').value })
+                });
+                if (!res.ok) throw new Error('Request failed');
+                showSuccess('Message sent', 'Thank you, ' + name + '. I will reply to ' + email + '.');
+            } catch (x) {
+                err.textContent = 'The message could not be sent. Please try again, or email ' + CONTACT_EMAIL + ' directly.';
+                err.classList.remove('hidden');
+            } finally {
+                setSending(false);
+            }
         }
 
         function resetContactForm() {
-            document.getElementById('contactForm').reset();
-            document.getElementById('contactSuccess').classList.add('hidden');
-            document.getElementById('contactForm').classList.remove('hidden');
+            $('contactForm').reset();
+            $('contactSuccess').classList.add('hidden');
+            $('contactForm').classList.remove('hidden');
         }
 
-        function copyDirectEmail() {
-            const directEmail = "luis.marull@columbia.edu";
-            const btnText = document.getElementById('copyEmailText');
-            
-            // Clipboard fallback mechanism
-            const textArea = document.createElement("textarea");
-            textArea.value = directEmail;
-            document.body.appendChild(textArea);
-            textArea.select();
+        async function copyDirectEmail() {
+            const label = $('copyEmailText');
             try {
-                document.execCommand('copy');
-                btnText.textContent = "Copied to clipboard!";
-            } catch (err) {
-                btnText.textContent = directEmail;
+                await navigator.clipboard.writeText(CONTACT_EMAIL);
+                label.textContent = 'Copied!';
+            } catch (x) {
+                label.textContent = CONTACT_EMAIL;
             }
-            document.body.removeChild(textArea);
-
-            setTimeout(() => {
-                btnText.textContent = "Copy direct email";
-            }, 3000);
+            setTimeout(() => { label.textContent = 'Copy email address'; }, 3000);
         }
 
-        function toggleTheme() {
-            document.documentElement.classList.toggle('dark');
-        }
+        function toggleTheme() { document.documentElement.classList.toggle('dark'); }
 
-        // Close modal on escape key
-        window.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closeModal('sampleModal');
-                closeModal('connectModal');
-                closeModal('resumeModal');
-            }
+        window.addEventListener('keydown', e => {
+            if (e.key === 'Escape') { closeModal('sampleModal'); closeModal('connectModal'); }
+        });
+        ['sampleModal', 'connectModal'].forEach(id => {
+            $(id).addEventListener('click', e => { if (e.target === $(id)) closeModal(id); });
         });
     </script>
 </body>
